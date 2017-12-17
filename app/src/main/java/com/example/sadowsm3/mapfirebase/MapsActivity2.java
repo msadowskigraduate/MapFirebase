@@ -1,14 +1,21 @@
 package com.example.sadowsm3.mapfirebase;
 
 import android.annotation.SuppressLint;
+import android.app.Dialog;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Looper;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ListAdapter;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
@@ -27,6 +34,8 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 
+import java.util.ArrayList;
+
 import lombok.NonNull;
 
 import static com.google.android.gms.location.LocationServices.getFusedLocationProviderClient;
@@ -37,7 +46,7 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
 
     private GoogleMap googleMap;
     private LocationRequest mLocationRequest;
-
+    private ListView listView;
     private long UPDATE_INTERVAL = 10 * 1000;  /* 10 secs */
     private long FASTEST_INTERVAL = 2000; /* 2 sec */
     private boolean mLocationPermissionGranted;
@@ -47,10 +56,32 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps2);
         startLocationUpdates();
-
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
+        Button clickButton = (Button) findViewById(R.id.placesList);
+        clickButton.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final Dialog dialog = new Dialog(MapsActivity2.this);
+                dialog.setContentView(R.layout.location_list);
+                dialog.setTitle("Title...");
+                ListAdapter adapter = new LocationAdapter(MapsActivity2.this, new ArrayList<com.example.sadowsm3.mapfirebase.Location>());
+                ListView lv = (ListView) dialog.findViewById(R.id.lvLocations);
+                lv.setAdapter(adapter);
+                dialog.show();
+                FloatingActionButton addNewButton = (FloatingActionButton) dialog.findViewById(R.id.btnAddNew);
+                addNewButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent (getBaseContext(), MainActivity.class);
+                        startActivity(intent);
+                    }
+                });
+            }
+        });
+
     }
 
     // Trigger new location updates at interval
@@ -161,4 +192,5 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
             }
         }
     }
+
 }

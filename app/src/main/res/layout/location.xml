@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal"
+    android:padding="5dp">
+
+    <TextView
+        android:id="@+id/tvLocationTitle"
+        android:autoSizeMinTextSize="6pt"
+        android:autoSizeMaxTextSize="12pt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="name"
+        android:textColor="@color/colorAccent">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/tvLocationDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:autoSizeMinTextSize="6pt"
+        android:autoSizeMaxTextSize="12pt"
+        android:text="price"
+        android:textColor="@color/colorAccent">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/tvLocationLatitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:autoSizeMinTextSize="6pt"
+        android:autoSizeMaxTextSize="12pt"
+        android:text="q"
+        android:textColor="@color/colorAccent">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/tvLocationLongitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:autoSizeMinTextSize="6pt"
+        android:autoSizeMaxTextSize="12pt"
+        android:text="q"
+        android:textColor="@color/colorAccent">
+
+    </TextView>
+
+    <CheckBox
+        android:id="@+id/bDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_weight="1"
+        android:focusable="false"
+        android:text="Delete"
+        android:textColor="@color/colorPrimaryDark" />
+</GridLayout>
+
