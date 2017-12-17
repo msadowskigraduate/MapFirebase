@@ -33,6 +33,8 @@ import static com.google.android.gms.location.LocationServices.getFusedLocationP
 
 public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallback {
 
+    private static final String TAG = MapsActivity2.class.getSimpleName();
+
     private GoogleMap googleMap;
     private LocationRequest mLocationRequest;
 
@@ -81,6 +83,7 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
                 Double.toString(location.getLatitude()) + "," +
                 Double.toString(location.getLongitude());
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
+        Log.e(TAG, msg);
         LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
         updatePositionOnMap(latLng);
     }
