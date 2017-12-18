@@ -157,6 +157,12 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
         if (mLocationPermissionGranted) {
             googleMap.setMyLocationEnabled(true);
         }
+
+        if(!locationList.isEmpty()) {
+            populateMarkers(locationList);
+        } else {
+            Toast.makeText(getApplicationContext(),"No locations saved!", Toast.LENGTH_LONG).show();
+        }
     }
 
     private void updatePositionOnMap(LatLng position) {
@@ -201,4 +207,9 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
         }
     }
 
+    private void populateMarkers(List<com.example.sadowsm3.mapfirebase.Location> locations) {
+        for(com.example.sadowsm3.mapfirebase.Location l : locations) {
+            googleMap.addMarker(new MarkerOptions().position(new LatLng(l.getLatitude(), l.getLongitude())).title(l.getTitle()));
+        }
+    }
 }

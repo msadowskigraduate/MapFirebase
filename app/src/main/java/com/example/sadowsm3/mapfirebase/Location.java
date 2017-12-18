@@ -24,6 +24,7 @@ public class Location implements Parcelable{
     String description;
     float longitude;
     float latitude;
+    float radius;
 
     @Override
     public int describeContents() {
@@ -37,6 +38,7 @@ public class Location implements Parcelable{
         parcel.writeString(description);
         parcel.writeFloat(longitude);
         parcel.writeFloat(latitude);
+        parcel.writeFloat(radius);
     }
 
     public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {
@@ -55,5 +57,6 @@ public class Location implements Parcelable{
         description = in.readString();
         longitude = in.readFloat();
         latitude = in.readFloat();
+        radius = in.readFloat();
     }
 }

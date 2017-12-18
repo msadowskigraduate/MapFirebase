@@ -5,25 +5,43 @@
     build-mode="COLD"
     density="420dpi"
     format="10"
-    ir-eligibility="COMPATIBLE"
+    ir-eligibility="R_CLASS_CHANGE"
     plugin-version="3.0.1"
-    timestamp="1513601719765"
+    timestamp="1513608515588"
     token="-3845765912264071874"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="16777" />
+        duration="13568" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="181" />
+        duration="539" />
     <task
         name="verifier"
-        duration="62" />
+        duration="329" />
 
+    <artifact
+        location="C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
+        type="SPLIT" />
     <artifact
         location="C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
         type="SPLIT" />
@@ -74,8 +92,8 @@
     </build>
     <build
         build-mode="COLD"
-        ir-eligibility="CLASS_ADDED"
-        timestamp="1513600535054"
+        ir-eligibility="R_CLASS_CHANGE"
+        timestamp="1513608515588"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
@@ -95,12 +113,6 @@
         <artifact
             location="C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
             type="SPLIT" />
-    </build>
-    <build
-        build-mode="COLD"
-        ir-eligibility="COMPATIBLE"
-        timestamp="1513601719765"
-        verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
             type="SPLIT" />

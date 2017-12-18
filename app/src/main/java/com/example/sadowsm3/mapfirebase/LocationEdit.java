@@ -22,7 +22,7 @@ public class LocationEdit extends AppCompatActivity {
 
     private static final String TAG = LocationEdit.class.getSimpleName();
 
-    ArrayList<Location> locations;
+//    ArrayList<Location> locations;
     private DatabaseReference mFirebaseDatabase;
     private FirebaseDatabase mFirebaseInstance;
 
@@ -34,6 +34,7 @@ public class LocationEdit extends AppCompatActivity {
     private EditText etDescription;
     private EditText etLongitude;
     private EditText etLatitude;
+    private EditText etRadius;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,7 +49,8 @@ public class LocationEdit extends AppCompatActivity {
             Location location = i.getExtras().getParcelable("location");
             try {
                 locationId = location.getId();
-                setValues(location.getTitle(), String.valueOf(location.getDescription()), String.valueOf(location.getLatitude()), String.valueOf(location.getLongitude()));
+                setValues(location.getTitle(), String.valueOf(location.getDescription()), String.valueOf(location.getLatitude()),
+                        String.valueOf(location.getLongitude()), String.valueOf(location.getRadius()));
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -83,7 +85,7 @@ public class LocationEdit extends AppCompatActivity {
      * Creating new user node under 'users'
      */
     public void createProduct(String title, String description,
-                              float longitude, float latitude) {
+                              float longitude, float latitude, float radius) {
 
         locationId = mFirebaseDatabase.push().getKey();
         Location location = Location.builder()
@@ -92,6 +94,7 @@ public class LocationEdit extends AppCompatActivity {
                 .description(description)
                 .longitude(longitude)
                 .latitude(latitude)
+                .radius(radius)
                 .build();
 
         mFirebaseDatabase.child(String.valueOf(locationId)).setValue(location);
@@ -119,11 +122,12 @@ public class LocationEdit extends AppCompatActivity {
         });
     }
 
-    private void updateProduct(String title, String description, float longitude, float latitude) {
+    private void updateProduct(String title, String description, float longitude, float latitude, float radius) {
         mFirebaseDatabase.child(String.valueOf(locationId)).child("title").setValue(title);
         mFirebaseDatabase.child(String.valueOf(locationId)).child("description").setValue(description);
         mFirebaseDatabase.child(String.valueOf(locationId)).child("longitude").setValue(longitude);
         mFirebaseDatabase.child(String.valueOf(locationId)).child("latitude").setValue(latitude);
+        mFirebaseDatabase.child(String.valueOf(locationId)).child("radius").setValue(radius);
     }
 
     private void initGUI() {
@@ -133,6 +137,7 @@ public class LocationEdit extends AppCompatActivity {
         etDescription = (EditText) findViewById(R.id.description);
         etLongitude = (EditText) findViewById(R.id.longitude);
         etLatitude = (EditText) findViewById(R.id.latitude);
+        etRadius = (EditText) findViewById(R.id.radius);
     }
 
     private void fieldReset() {
@@ -140,6 +145,7 @@ public class LocationEdit extends AppCompatActivity {
         etDescription.setText("");
         etLongitude.setText("");
         etLatitude.setText("");
+        etRadius.setText("");
         btnSave.setText("Save");
     }
 
@@ -148,11 +154,12 @@ public class LocationEdit extends AppCompatActivity {
         startActivity(intent);
     }
 
-    private void setValues(String title, String desc, String longitude, String latitude) {
+    private void setValues(String title, String desc, String longitude, String latitude, String radius) {
         etTitle.setText(title);
         etDescription.setText(desc);
         etLongitude.setText(longitude);
         etLatitude.setText(latitude);
+        etRadius.setText(radius);
     }
 
     private void setButtonListener(final boolean state) {
@@ -166,15 +173,17 @@ public class LocationEdit extends AppCompatActivity {
                 String description = "";
                 float longitude = 1;
                 float latitude = 1;
+                float radius = 1;
                 try {
                     title = etTitle.getText().toString();
                     description = etDescription.getText().toString();
                     longitude = Float.valueOf(etLongitude.getText().toString());
                     latitude = Float.valueOf(etLatitude.getText().toString());
+                    radius = Float.valueOf(etRadius.getText().toString());
                     if (state) {
-                        createProduct(title, description, longitude, latitude);
+                        createProduct(title, description, longitude, latitude, radius);
                     } else {
-                        updateProduct(title, description, longitude, latitude);
+                        updateProduct(title, description, longitude, latitude, radius);
                     }
                     fieldReset();
                 } catch (Exception e) {

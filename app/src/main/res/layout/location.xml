@@ -54,6 +54,18 @@
 
     </TextView>
 
+    <TextView
+        android:id="@+id/tvLocationRadius"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:autoSizeMaxTextSize="12pt"
+        android:autoSizeMinTextSize="6pt"
+        android:text="R"
+        android:textColor="@color/colorAccent">
+
+    </TextView>
+
     <CheckBox
         android:id="@+id/bDelete"
         android:layout_width="wrap_content"
