@@ -1,4 +1,4 @@
-#Mon Dec 18 15:49:50 CET 2017
+#Mon Dec 18 16:59:26 CET 2017
 base.0=C\:\\Users\\sadowsm3\\Documents\\pjatk- repository\\MapFirebase\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\46
 path.0=classes.dex
 renamed.0=classes.dex

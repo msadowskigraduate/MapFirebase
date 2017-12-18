@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml:2:1-50:12
-INJECTED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml:2:1-50:12
-INJECTED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml:2:1-50:12
-INJECTED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml:2:1-50:12
+ADDED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml:2:1-54:12
+INJECTED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml:2:1-54:12
+INJECTED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml:2:1-54:12
+INJECTED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml:2:1-54:12
 MERGED from [com.google.firebase:firebase-core:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-core-11.6.2.aar\1a895e44e5a18de62a921c58c693cecf\AndroidManifest.xml:2:1-6:12
 MERGED from [com.android.support:design:26.1.0] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\c8776772b3f7063931472010dd7d1daf\AndroidManifest.xml:17:1-31:12
 MERGED from [com.google.android.gms:play-services:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-11.6.2.aar\8b16346e7b29e92fe2facce58f7a24bd\AndroidManifest.xml:2:1-6:12
@@ -123,20 +123,20 @@ MERGED from [com.google.android.gms:play-services-vision-license:11.6.2] C:\User
 MERGED from [com.google.android.gms:play-services-wallet-license:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-wallet-license-11.6.2.aar\654defda391bcdaf243f6f9fdd421b68\AndroidManifest.xml:2:1-6:12
 MERGED from [com.google.android.gms:play-services-wearable-license:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-wearable-license-11.6.2.aar\9379fb69b88b32c9d7b3b76c7ed1ea93\AndroidManifest.xml:2:1-6:12
 MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\dcaaab114d2e933dc3ca0a8e968672fd\AndroidManifest.xml:17:1-30:12
-INJECTED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml:2:1-50:12
-INJECTED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml:2:1-50:12
-INJECTED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml:2:1-50:12
+INJECTED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml:2:1-54:12
+INJECTED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml:2:1-54:12
+INJECTED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml:2:1-54:12
 	package
 		ADDED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml:3:5-47
 		INJECTED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml:2:1-50:12
+		ADDED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml:2:1-54:12
 		INJECTED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml:2:1-50:12
+		ADDED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml:2:1-54:12
 		INJECTED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml:2:11-69
@@ -199,7 +199,7 @@ ADDED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\mai
 	android:name
 		ADDED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml:13:22-76
 application
-ADDED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml:15:5-48:19
+ADDED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml:15:5-52:19
 MERGED from [com.google.firebase:firebase-core:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-core-11.6.2.aar\1a895e44e5a18de62a921c58c693cecf\AndroidManifest.xml:5:5-20
 MERGED from [com.google.firebase:firebase-core:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-core-11.6.2.aar\1a895e44e5a18de62a921c58c693cecf\AndroidManifest.xml:5:5-20
 MERGED from [com.android.support:design:26.1.0] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\c8776772b3f7063931472010dd7d1daf\AndroidManifest.xml:25:5-29:19
@@ -461,9 +461,15 @@ ADDED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\mai
 	android:name
 		ADDED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml:45:13-42
 activity#com.example.sadowsm3.mapfirebase.LocationEdit
-ADDED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml:47:9-59
+ADDED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml:47:9-50
 	android:name
 		ADDED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml:47:19-47
+service#com.example.sadowsm3.mapfirebase.GeoFenceIntentService
+ADDED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml:49:9-51:48
+	android:exported
+		ADDED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml:51:13-37
+	android:name
+		ADDED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml:50:13-50
 uses-sdk
 INJECTED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml

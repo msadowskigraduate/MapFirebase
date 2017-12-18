@@ -6,12 +6,13 @@ import android.app.PendingIntent;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
-import android.location.LocationManager;
+import android.os.Bundle;
 import android.os.Looper;
+import android.preference.PreferenceManager;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
-import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.View;
@@ -36,8 +37,10 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -46,7 +49,7 @@ import lombok.NonNull;
 
 import static com.google.android.gms.location.LocationServices.getFusedLocationProviderClient;
 
-public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallback {
+public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallback, OnCompleteListener<Void> {
 
     private static final String TAG = MapsActivity2.class.getSimpleName();
 
@@ -60,6 +63,37 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
     private boolean mLocationPermissionGranted;
     private List<com.example.sadowsm3.mapfirebase.Location> locationList;
     private LatLng currentLocation;
+
+
+    private static final int REQUEST_PERMISSIONS_REQUEST_CODE = 34;
+
+    /**
+     * Tracks whether the user requested to add or remove geofences, or to do neither.
+     */
+    private enum PendingGeofenceTask {
+        ADD, REMOVE, NONE
+    }
+
+    /**
+     * Provides access to the Geofencing API.
+     */
+    private GeofencingClient mGeofencingClient;
+
+    /**
+     * The list of geofences used in this sample.
+     */
+    private ArrayList<Geofence> mGeofenceList;
+
+    /**
+     * Used when requesting to add or remove geofences.
+     */
+    private PendingIntent mGeofencePendingIntent;
+
+    // Buttons for kicking off the process of adding or removing geofences.
+    private Button mAddGeofencesButton;
+    private Button mRemoveGeofencesButton;
+
+    private PendingGeofenceTask mPendingGeofenceTask = PendingGeofenceTask.NONE;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -103,6 +137,7 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
         mGeofencePendingIntent = null;
         mGeofencePendingIntent = null;
         mGeofencingClient = LocationServices.getGeofencingClient(this);
+        performPendingGeofenceTask();
     }
 
     // Trigger new location updates at interval
@@ -205,6 +240,13 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
         }
     }
 
+    private void performPendingGeofenceTask() {
+        if (mPendingGeofenceTask == PendingGeofenceTask.ADD) {
+            addGeofences();
+        } else if (mPendingGeofenceTask == PendingGeofenceTask.REMOVE) {
+            removeGeofences();
+        }
+    }
     @Override
     public void onRequestPermissionsResult(int requestCode,
                                            @NonNull String permissions[],
@@ -229,5 +271,113 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
 
     private LatLng getCurrentLocation() {
         return currentLocation;
+    }
+    private GeofencingRequest getGeofencingRequest() {
+        GeofencingRequest.Builder builder = new GeofencingRequest.Builder();
+
+        // The INITIAL_TRIGGER_ENTER flag indicates that geofencing service should trigger a
+        // GEOFENCE_TRANSITION_ENTER notification when the geofence is added and if the device
+        // is already inside that geofence.
+        builder.setInitialTrigger(GeofencingRequest.INITIAL_TRIGGER_ENTER);
+
+        // Add the geofences to be monitored by geofencing service.
+        builder.addGeofences(mGeofenceList);
+
+        // Return a GeofencingRequest.
+        return builder.build();
+    }
+
+    @SuppressWarnings("MissingPermission")
+    private void addGeofences() {
+        mGeofencingClient.addGeofences(getGeofencingRequest(), getGeofencePendingIntent())
+                .addOnCompleteListener(this);
+    }
+
+    @SuppressWarnings("MissingPermission")
+    private void removeGeofences() {
+        mGeofencingClient.removeGeofences(getGeofencePendingIntent()).addOnCompleteListener(this);
+    }
+
+    @Override
+    public void onComplete(@NonNull Task<Void> task) {
+        mPendingGeofenceTask = PendingGeofenceTask.NONE;
+        if (task.isSuccessful()) {
+            updateGeofencesAdded(!getGeofencesAdded());
+            setButtonsEnabledState();
+
+            int messageId = getGeofencesAdded() ? R.string.geofences_added :
+                    R.string.geofences_removed;
+            Toast.makeText(this, getString(messageId), Toast.LENGTH_SHORT).show();
+        } else {
+            Log.w(TAG, "not working");
+        }
+    }
+
+    private PendingIntent getGeofencePendingIntent() {
+        // Reuse the PendingIntent if we already have it.
+        if (mGeofencePendingIntent != null) {
+            return mGeofencePendingIntent;
+        }
+        Intent intent = new Intent(this, GeoFenceIntentService.class);
+        // We use FLAG_UPDATE_CURRENT so that we get the same pending intent back when calling
+        // addGeofences() and removeGeofences().
+        return PendingIntent.getService(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+    }
+
+    private void updateGeofencesAdded(boolean added) {
+        PreferenceManager.getDefaultSharedPreferences(this)
+                .edit()
+                .putBoolean("geofences", added)
+                .apply();
+    }
+
+    private void populateGeofenceList(List<com.example.sadowsm3.mapfirebase.Location > locationList) {
+        for (com.example.sadowsm3.mapfirebase.Location l : locationList) {
+
+            mGeofenceList.add(new Geofence.Builder()
+                    // Set the request ID of the geofence. This is a string to identify this
+                    // geofence.
+                    .setRequestId(l.getId())
+
+                    // Set the circular region of this geofence.
+                    .setCircularRegion(
+                            l.getLatitude(),
+                            l.getLongitude(),
+                            l.getRadius()
+                    )
+
+                    // Set the expiration duration of the geofence. This geofence gets automatically
+                    // removed after this period of time.
+                    .setExpirationDuration(9999999)
+
+                    // Set the transition types of interest. Alerts are only generated for these
+                    // transition. We track entry and exit transitions in this sample.
+                    .setTransitionTypes(Geofence.GEOFENCE_TRANSITION_ENTER |
+                            Geofence.GEOFENCE_TRANSITION_EXIT)
+
+                    // Create the geofence.
+                    .build());
+        }
+    }
+
+    private void setButtonsEnabledState() {
+        if (getGeofencesAdded()) {
+            mAddGeofencesButton.setEnabled(false);
+            mRemoveGeofencesButton.setEnabled(true);
+        } else {
+            mAddGeofencesButton.setEnabled(true);
+            mRemoveGeofencesButton.setEnabled(false);
+        }
+    }
+    private boolean getGeofencesAdded() {
+        return PreferenceManager.getDefaultSharedPreferences(this).getBoolean(
+                "geofences", false);
+    }
+
+    private void showSnackbar(final String text) {
+        View container = findViewById(android.R.id.content);
+        if (container != null) {
+            Snackbar.make(container, text, Snackbar.LENGTH_LONG).show();
+        }
     }
 }
