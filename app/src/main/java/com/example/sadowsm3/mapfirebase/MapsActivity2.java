@@ -2,9 +2,11 @@ package com.example.sadowsm3.mapfirebase;
 
 import android.annotation.SuppressLint;
 import android.app.Dialog;
+import android.app.PendingIntent;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
+import android.location.LocationManager;
 import android.os.Looper;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.ActivityCompat;
@@ -19,6 +21,9 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.Geofence;
+import com.google.android.gms.location.GeofencingClient;
+import com.google.android.gms.location.GeofencingRequest;
 import com.google.android.gms.location.LocationCallback;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationResult;
@@ -45,14 +50,16 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
 
     private static final String TAG = MapsActivity2.class.getSimpleName();
 
-    private GoogleMap googleMap;
-    private LocationRequest mLocationRequest;
-    private ListView listView;
+    private int PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION = 1;
     private long UPDATE_INTERVAL = 10 * 1000;  /* 10 secs */
     private long FASTEST_INTERVAL = 2000; /* 2 sec */
+
+    private GoogleMap googleMap;
+    private LocationRequest mLocationRequest;
+    //private ListView listView;
     private boolean mLocationPermissionGranted;
-    private int PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION = 1;
     private List<com.example.sadowsm3.mapfirebase.Location> locationList;
+    private LatLng currentLocation;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -84,12 +91,18 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
                     @Override
                     public void onClick(View view) {
                         Intent intent = new Intent(getBaseContext(), LocationEdit.class);
+                        intent.putExtra("longitude", getCurrentLocation().longitude);
+                        intent.putExtra("latitude", getCurrentLocation().latitude);
                         startActivity(intent);
                     }
                 });
             }
         });
 
+        mGeofenceList = new ArrayList<>();
+        mGeofencePendingIntent = null;
+        mGeofencePendingIntent = null;
+        mGeofencingClient = LocationServices.getGeofencingClient(this);
     }
 
     // Trigger new location updates at interval
@@ -124,6 +137,7 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
         Log.e(TAG, msg);
         LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
+        currentLocation = latLng;
         updatePositionOnMap(latLng);
     }
 
@@ -211,5 +225,9 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
         for(com.example.sadowsm3.mapfirebase.Location l : locations) {
             googleMap.addMarker(new MarkerOptions().position(new LatLng(l.getLatitude(), l.getLongitude())).title(l.getTitle()));
         }
+    }
+
+    private LatLng getCurrentLocation() {
+        return currentLocation;
     }
 }

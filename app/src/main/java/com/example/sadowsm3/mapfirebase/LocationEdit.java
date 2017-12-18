@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -36,6 +37,8 @@ public class LocationEdit extends AppCompatActivity {
     private EditText etLatitude;
     private EditText etRadius;
 
+    private float currentLongitude;
+    private float currentLatitude;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,6 +60,12 @@ public class LocationEdit extends AppCompatActivity {
         } else {
             setButtonListener(true);
         }
+
+        if(i.getFloatExtra("longitude", 0) != 0 && i.getFloatExtra("latitude", 0) != 0) {
+            currentLatitude = i.getFloatExtra("latitude", 0);
+            currentLongitude = i.getFloatExtra("longitude", 0);
+        }
+
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setIcon(R.mipmap.ic_launcher);
 
@@ -143,8 +152,9 @@ public class LocationEdit extends AppCompatActivity {
     private void fieldReset() {
         etTitle.setText("");
         etDescription.setText("");
-        etLongitude.setText("");
-        etLatitude.setText("");
+        etLongitude.setText(String.valueOf(currentLongitude));
+        etLatitude.setText(String.valueOf(currentLatitude));
+        Toast.makeText(getBaseContext(), "Current LatLng injected!", Toast.LENGTH_SHORT).show();
         etRadius.setText("");
         btnSave.setText("Save");
     }
