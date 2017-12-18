@@ -23,7 +23,7 @@ public class LocationEdit extends AppCompatActivity {
 
     private static final String TAG = LocationEdit.class.getSimpleName();
 
-//    ArrayList<Location> locations;
+    //    ArrayList<Location> locations;
     private DatabaseReference mFirebaseDatabase;
     private FirebaseDatabase mFirebaseInstance;
 
@@ -37,8 +37,9 @@ public class LocationEdit extends AppCompatActivity {
     private EditText etLatitude;
     private EditText etRadius;
 
-    private float currentLongitude;
-    private float currentLatitude;
+    private double currentLongitude;
+    private double currentLatitude;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,9 +62,10 @@ public class LocationEdit extends AppCompatActivity {
             setButtonListener(true);
         }
 
-        if(i.getFloatExtra("longitude", 0) != 0 && i.getFloatExtra("latitude", 0) != 0) {
-            currentLatitude = i.getFloatExtra("latitude", 0);
-            currentLongitude = i.getFloatExtra("longitude", 0);
+        currentLatitude = i.getDoubleExtra("latitude", 0);
+        currentLongitude = i.getDoubleExtra("longitude", 0);
+        if (currentLatitude != 0 && currentLongitude != 0) {
+            fieldReset();
         }
 
         getSupportActionBar().setDisplayShowHomeEnabled(true);

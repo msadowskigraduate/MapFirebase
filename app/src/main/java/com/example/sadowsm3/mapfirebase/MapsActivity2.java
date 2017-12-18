@@ -5,12 +5,11 @@ import android.app.Dialog;
 import android.app.PendingIntent;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.location.Location;
 import android.os.Bundle;
 import android.os.Looper;
-import android.preference.PreferenceManager;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.content.ContextCompat;
@@ -35,6 +34,8 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.CameraPosition;
+import com.google.android.gms.maps.model.CircleOptions;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -64,8 +65,17 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
     private List<com.example.sadowsm3.mapfirebase.Location> locationList;
     private LatLng currentLocation;
 
-
-    private static final int REQUEST_PERMISSIONS_REQUEST_CODE = 34;
+    @Override
+    public void onComplete(@NonNull Task<Void> task) {
+        mPendingGeofenceTask = PendingGeofenceTask.NONE;
+        if (task.isSuccessful()) {
+           // populateGeofenceList(locationList);
+            Toast.makeText(this, "Complete", Toast.LENGTH_SHORT).show();
+        } else {
+            // Get the status code for the error and log it using a user-friendly message.
+            Log.w(TAG, "error");
+        }
+    }
 
     /**
      * Tracks whether the user requested to add or remove geofences, or to do neither.
@@ -88,10 +98,6 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
      * Used when requesting to add or remove geofences.
      */
     private PendingIntent mGeofencePendingIntent;
-
-    // Buttons for kicking off the process of adding or removing geofences.
-    private Button mAddGeofencesButton;
-    private Button mRemoveGeofencesButton;
 
     private PendingGeofenceTask mPendingGeofenceTask = PendingGeofenceTask.NONE;
 
@@ -135,9 +141,8 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
 
         mGeofenceList = new ArrayList<>();
         mGeofencePendingIntent = null;
-        mGeofencePendingIntent = null;
         mGeofencingClient = LocationServices.getGeofencingClient(this);
-        performPendingGeofenceTask();
+        populateGeofenceList(locationList);
     }
 
     // Trigger new location updates at interval
@@ -216,7 +221,10 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
 
     private void updatePositionOnMap(LatLng position) {
         if (googleMap != null) {
-            googleMap.moveCamera(CameraUpdateFactory.newLatLng(position));
+            googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(new CameraPosition.Builder()
+                    .target(position)
+                    .zoom(20.0f)
+                    .build()));
             googleMap.addMarker(new MarkerOptions().position(position).title("Current Position"));
         } else {
             Log.e(this.getLocalClassName(), "googleMap is null!");
@@ -240,13 +248,6 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
         }
     }
 
-    private void performPendingGeofenceTask() {
-        if (mPendingGeofenceTask == PendingGeofenceTask.ADD) {
-            addGeofences();
-        } else if (mPendingGeofenceTask == PendingGeofenceTask.REMOVE) {
-            removeGeofences();
-        }
-    }
     @Override
     public void onRequestPermissionsResult(int requestCode,
                                            @NonNull String permissions[],
@@ -266,6 +267,7 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
     private void populateMarkers(List<com.example.sadowsm3.mapfirebase.Location> locations) {
         for(com.example.sadowsm3.mapfirebase.Location l : locations) {
             googleMap.addMarker(new MarkerOptions().position(new LatLng(l.getLatitude(), l.getLongitude())).title(l.getTitle()));
+            drawGeofenceCircle(new LatLng(l.getLatitude(), l.getLongitude()), l.radius);
         }
     }
 
@@ -287,51 +289,11 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
         return builder.build();
     }
 
-    @SuppressWarnings("MissingPermission")
-    private void addGeofences() {
-        mGeofencingClient.addGeofences(getGeofencingRequest(), getGeofencePendingIntent())
-                .addOnCompleteListener(this);
-    }
-
-    @SuppressWarnings("MissingPermission")
-    private void removeGeofences() {
-        mGeofencingClient.removeGeofences(getGeofencePendingIntent()).addOnCompleteListener(this);
-    }
-
-    @Override
-    public void onComplete(@NonNull Task<Void> task) {
-        mPendingGeofenceTask = PendingGeofenceTask.NONE;
-        if (task.isSuccessful()) {
-            updateGeofencesAdded(!getGeofencesAdded());
-            setButtonsEnabledState();
-
-            int messageId = getGeofencesAdded() ? R.string.geofences_added :
-                    R.string.geofences_removed;
-            Toast.makeText(this, getString(messageId), Toast.LENGTH_SHORT).show();
-        } else {
-            Log.w(TAG, "not working");
-        }
-    }
-
-    private PendingIntent getGeofencePendingIntent() {
-        // Reuse the PendingIntent if we already have it.
-        if (mGeofencePendingIntent != null) {
-            return mGeofencePendingIntent;
-        }
-        Intent intent = new Intent(this, GeoFenceIntentService.class);
-        // We use FLAG_UPDATE_CURRENT so that we get the same pending intent back when calling
-        // addGeofences() and removeGeofences().
-        return PendingIntent.getService(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
-    }
-
-    private void updateGeofencesAdded(boolean added) {
-        PreferenceManager.getDefaultSharedPreferences(this)
-                .edit()
-                .putBoolean("geofences", added)
-                .apply();
-    }
-
+    @SuppressLint("MissingPermission")
     private void populateGeofenceList(List<com.example.sadowsm3.mapfirebase.Location > locationList) {
+        mGeofenceList.clear();
+        Log.e(TAG, "GeofenceList cleared!");
+
         for (com.example.sadowsm3.mapfirebase.Location l : locationList) {
 
             mGeofenceList.add(new Geofence.Builder()
@@ -357,27 +319,29 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
 
                     // Create the geofence.
                     .build());
+            Log.e(TAG, "Geofance constructed!");
+            mGeofencingClient.addGeofences(getGeofencingRequest(), getGeofencePendingIntent())
+                    .addOnCompleteListener(this);
         }
     }
+    private PendingIntent getGeofencePendingIntent() {
+        // Reuse the PendingIntent if we already have it.
+        if (mGeofencePendingIntent != null) {
+            return mGeofencePendingIntent;
+        }
+        Intent intent = new Intent(this, GeoFenceIntentService.class);
+        // We use FLAG_UPDATE_CURRENT so that we get the same pending intent back when calling
+        // addGeofences() and removeGeofences().
+        return PendingIntent.getService(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+    }
+    private void drawGeofenceCircle(LatLng position, float radius) {
+        CircleOptions circleOptions = new CircleOptions()
+                .center(position)
+                .radius(radius)
+                .strokeWidth(10)
+                .strokeColor(Color.BLUE)
+                .fillColor(Color.BLUE);
 
-    private void setButtonsEnabledState() {
-        if (getGeofencesAdded()) {
-            mAddGeofencesButton.setEnabled(false);
-            mRemoveGeofencesButton.setEnabled(true);
-        } else {
-            mAddGeofencesButton.setEnabled(true);
-            mRemoveGeofencesButton.setEnabled(false);
-        }
-    }
-    private boolean getGeofencesAdded() {
-        return PreferenceManager.getDefaultSharedPreferences(this).getBoolean(
-                "geofences", false);
-    }
-
-    private void showSnackbar(final String text) {
-        View container = findViewById(android.R.id.content);
-        if (container != null) {
-            Snackbar.make(container, text, Snackbar.LENGTH_LONG).show();
-        }
+        googleMap.addCircle(circleOptions);
     }
 }
