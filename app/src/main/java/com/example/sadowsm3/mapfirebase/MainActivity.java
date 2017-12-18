@@ -7,6 +7,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -15,7 +16,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -35,9 +38,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getBaseContext(), MapsActivity2.class);
+                Bundle bundle = new Bundle();
+                bundle.putParcelableArrayList("locations", (ArrayList<Location>) locations);
+                i.putExtras(bundle);
                 startActivity(i);
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
             }
         });
 
@@ -109,9 +113,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-
-    //TODO Edit
-
     private void fillListViewData(List<Location> locations) {
         listAdapter = new LocationAdapter(this, locations);
         listViewProducts.setAdapter(listAdapter);
@@ -119,26 +120,23 @@ public class MainActivity extends AppCompatActivity {
 
     private void initializeGUI() {
         listViewProducts = (ListView) findViewById(R.id.lvLocations);
-        //initListViewOnItemClick();
+        initListViewOnItemClick();
     }
 
     public void refreshMainActivity(View view) {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
-
-    //TODO edit endpoint
-//    private void initListViewOnItemClick() {
-//        listViewProducts.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> parent, View v, int position,
-//                                    long id) {
-//                Location location = locations.get(position);
-//                Intent intent = new Intent(MainActivity.this, FirebaseViewActivity.class);
-//                intent.putExtra("location", location);
-//                startActivity(intent);
-//            }
-//        });
-//    }
-
+    private void initListViewOnItemClick() {
+        listViewProducts.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View v, int position,
+                                    long id) {
+                Location location = locations.get(position);
+                Intent intent = new Intent(MainActivity.this, LocationEdit.class);
+                intent.putExtra("location", location);
+                startActivity(intent);
+            }
+        });
+    }
 }

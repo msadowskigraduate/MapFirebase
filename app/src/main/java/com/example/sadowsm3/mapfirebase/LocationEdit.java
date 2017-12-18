@@ -30,10 +30,10 @@ public class LocationEdit extends AppCompatActivity {
 
     private Button btnSave;
     private Button btnReturn;
-    private EditText etName;
-    private EditText etPrice;
-    private EditText etQuantity;
-    private CheckBox cbBought;
+    private EditText etTitle;
+    private EditText etDescription;
+    private EditText etLongitude;
+    private EditText etLatitude;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -129,17 +129,17 @@ public class LocationEdit extends AppCompatActivity {
     private void initGUI() {
         btnSave = (Button) findViewById(R.id.btnFirebaseSave);
         btnReturn = (Button) findViewById(R.id.btnReturn);
-        etName = (EditText) findViewById(R.id.name);
-        etPrice = (EditText) findViewById(R.id.price);
-        etQuantity = (EditText) findViewById(R.id.quantity);
-        cbBought = (CheckBox) findViewById(R.id.cbProductBought);
+        etTitle = (EditText) findViewById(R.id.title);
+        etDescription = (EditText) findViewById(R.id.description);
+        etLongitude = (EditText) findViewById(R.id.longitude);
+        etLatitude = (EditText) findViewById(R.id.latitude);
     }
 
     private void fieldReset() {
-        etName.setText("");
-        etPrice.setText("");
-        etQuantity.setText("");
-        cbBought.setChecked(false);
+        etTitle.setText("");
+        etDescription.setText("");
+        etLongitude.setText("");
+        etLatitude.setText("");
         btnSave.setText("Save");
     }
 
@@ -148,11 +148,11 @@ public class LocationEdit extends AppCompatActivity {
         startActivity(intent);
     }
 
-    private void setValues(String name, String price, String quantity, String isBought) {
-        etName.setText(name);
-        etPrice.setText(price);
-        etQuantity.setText(quantity);
-        cbBought.setChecked(Boolean.parseBoolean(isBought));
+    private void setValues(String title, String desc, String longitude, String latitude) {
+        etTitle.setText(title);
+        etDescription.setText(desc);
+        etLongitude.setText(longitude);
+        etLatitude.setText(latitude);
     }
 
     private void setButtonListener(final boolean state) {
@@ -167,10 +167,10 @@ public class LocationEdit extends AppCompatActivity {
                 float longitude = 1;
                 float latitude = 1;
                 try {
-                    title = etName.getText().toString();
-                    description = etPrice.getText().toString();
-                    longitude = Float.valueOf(etQuantity.getText().toString());
-                    latitude = Float.valueOf();
+                    title = etTitle.getText().toString();
+                    description = etDescription.getText().toString();
+                    longitude = Float.valueOf(etLongitude.getText().toString());
+                    latitude = Float.valueOf(etLatitude.getText().toString());
                     if (state) {
                         createProduct(title, description, longitude, latitude);
                     } else {
@@ -178,7 +178,7 @@ public class LocationEdit extends AppCompatActivity {
                     }
                     fieldReset();
                 } catch (Exception e) {
-                    etName.setError("There are errors in your product definition.");
+                    etTitle.setError("There are errors in your product definition.");
                 }
 
             }

@@ -35,6 +35,7 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import lombok.NonNull;
 
@@ -51,6 +52,7 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
     private long FASTEST_INTERVAL = 2000; /* 2 sec */
     private boolean mLocationPermissionGranted;
     private int PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION = 1;
+    private List<com.example.sadowsm3.mapfirebase.Location> locationList;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,15 +61,21 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
-
+        try {
+            Bundle bundle = getIntent().getExtras();
+            locationList = bundle.getParcelableArrayList("locations");
+        } catch (Exception e) {
+            Log.e(TAG, "Errors with parcelable ");
+            e.printStackTrace();
+        }
         Button clickButton = (Button) findViewById(R.id.placesList);
-        clickButton.setOnClickListener( new View.OnClickListener() {
+        clickButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 final Dialog dialog = new Dialog(MapsActivity2.this);
                 dialog.setContentView(R.layout.location_list);
                 dialog.setTitle("Title...");
-                ListAdapter adapter = new LocationAdapter(MapsActivity2.this, );
+                ListAdapter adapter = new LocationAdapter(MapsActivity2.this, locationList);
                 ListView lv = (ListView) dialog.findViewById(R.id.lvLocations);
                 lv.setAdapter(adapter);
                 dialog.show();
@@ -75,7 +83,7 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
                 addNewButton.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        Intent intent = new Intent (getBaseContext(), MainActivity.class);
+                        Intent intent = new Intent(getBaseContext(), LocationEdit.class);
                         startActivity(intent);
                     }
                 });
@@ -152,14 +160,14 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
     }
 
     private void updatePositionOnMap(LatLng position) {
-        if(googleMap != null) {
+        if (googleMap != null) {
             googleMap.moveCamera(CameraUpdateFactory.newLatLng(position));
             googleMap.addMarker(new MarkerOptions().position(position).title("Current Position"));
-        }
-        else {
+        } else {
             Log.e(this.getLocalClassName(), "googleMap is null!");
         }
     }
+
     private void getLocationPermission() {
     /*
      * Request location permission, so that we can get the location of the

@@ -25,7 +25,7 @@
 
 
     <EditText
-        android:id="@+id/name"
+        android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -43,26 +43,26 @@
         app:layout_constraintVertical_bias="0.069" />
 
     <EditText
-        android:id="@+id/price"
+        android:id="@+id/description"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="93dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:hint="Location Description"
-        android:inputType="textEmailAddress"
+        android:inputType="textMultiLine"
         android:maxLines="1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/txt_user"
-        app:layout_constraintVertical_bias="0.229"
+        app:layout_constraintVertical_bias="0.383"
         tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/quantity"
+        android:id="@+id/longitude"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -81,7 +81,7 @@
         tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/quantity2"
+        android:id="@+id/latitude"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -93,9 +93,10 @@
         android:maxLines="1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/txt_user"
-        app:layout_constraintVertical_bias="0.386"
+        app:layout_constraintVertical_bias="0.209"
         tools:ignore="MissingConstraints" />
 
     <Button

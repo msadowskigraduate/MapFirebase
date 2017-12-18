@@ -9,7 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.TextView;
 
-import com.google.firebase.database.DatabaseReference;
+import org.w3c.dom.Text;
 
 import java.util.List;
 
@@ -23,7 +23,6 @@ public class LocationAdapter extends ArrayAdapter<Location> {
 
     private List<Location> locations;
     private Activity context;
-    private DatabaseReference mFirebaseDatabase;
 
     public LocationAdapter(Activity context, List<Location> locations) {
         super(context, R.layout.location_list, locations);
@@ -38,12 +37,12 @@ public class LocationAdapter extends ArrayAdapter<Location> {
 
         if (rowView == null) {
             final LayoutInflater layoutInflater = context.getLayoutInflater();
-            rowView = layoutInflater.inflate(R.layout.location_list, null, true);
+            rowView = layoutInflater.inflate(R.layout.location, null, true);
             viewHolder = ViewHolder.builder()
                     .tvLocationName((TextView) rowView.findViewById(R.id.tvLocationTitle))
                     .tvLocationDescription((TextView) rowView.findViewById(R.id.tvLocationDescription))
                     .tvLocationLatitude((TextView) rowView.findViewById(R.id.tvLocationLatitude))
-                    .tvLocationLongitude((CheckBox) rowView.findViewById(R.id.tvLocationLongitude))
+                    .tvLocationLongitude((TextView) rowView.findViewById(R.id.tvLocationLongitude))
                     .cbDelete((CheckBox) rowView.findViewById(R.id.bDelete))
                     .build();
 
@@ -54,6 +53,7 @@ public class LocationAdapter extends ArrayAdapter<Location> {
                             Location location = locations.get(position);
                             Log.e(getContext().getClass().getName(), "Deleting item of ID: " + location.getId() + " position: " + position);
                            // mFirebaseDatabase.child(location.getId()).removeValue();
+
                             locations.remove(position);
                             notifyDataSetChanged();
                             Log.e(getContext().getClass().getName(), "Deleted!");
@@ -77,7 +77,7 @@ public class LocationAdapter extends ArrayAdapter<Location> {
         public TextView tvLocationName;
         public TextView tvLocationDescription;
         public TextView tvLocationLatitude;
-        public CheckBox tvLocationLongitude;
+        public TextView tvLocationLongitude;
         public CheckBox cbDelete;
     }
 }
