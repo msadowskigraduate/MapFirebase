@@ -1,9 +1,10 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml:2:1-49:12
-INJECTED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml:2:1-49:12
-INJECTED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml:2:1-49:12
-INJECTED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml:2:1-49:12
+ADDED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml:2:1-50:12
+INJECTED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml:2:1-50:12
+INJECTED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml:2:1-50:12
+INJECTED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml:2:1-50:12
+MERGED from [com.google.firebase:firebase-core:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-core-11.6.2.aar\1a895e44e5a18de62a921c58c693cecf\AndroidManifest.xml:2:1-6:12
 MERGED from [com.android.support:design:26.1.0] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\c8776772b3f7063931472010dd7d1daf\AndroidManifest.xml:17:1-31:12
 MERGED from [com.google.android.gms:play-services:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-11.6.2.aar\8b16346e7b29e92fe2facce58f7a24bd\AndroidManifest.xml:2:1-6:12
 MERGED from [com.google.android.gms:play-services-cast-framework:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-cast-framework-11.6.2.aar\5aff45c4ab94f2c76bc0f42c545c7a00\AndroidManifest.xml:2:1-9:12
@@ -16,10 +17,13 @@ MERGED from [com.google.android.gms:play-services-places:11.6.2] C:\Users\sadows
 MERGED from [com.google.android.gms:play-services-wallet:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-wallet-11.6.2.aar\64b46f79b7d5feb7cebeb67b026b005c\AndroidManifest.xml:16:1-20:12
 MERGED from [com.google.android.gms:play-services-maps:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-maps-11.6.2.aar\7920732ce77ed52fa6ae679c1d5732c4\AndroidManifest.xml:16:1-25:12
 MERGED from [com.google.firebase:firebase-database:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-database-11.6.2.aar\1770880984eaa621f37106e40f7f2317\AndroidManifest.xml:2:1-4:12
+MERGED from [com.google.firebase:firebase-crash:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-crash-11.6.2.aar\59a542fbf2f100f46e744141009fe091\AndroidManifest.xml:16:1-25:12
+MERGED from [com.google.android.gms:play-services-tagmanager:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-11.6.2.aar\f50e93f6637806f3af3ddaa82b16adae\AndroidManifest.xml:16:1-18:12
+MERGED from [com.google.android.gms:play-services-tagmanager-api:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.6.2.aar\94f1dedb69e267d661ba9bf7ab95299f\AndroidManifest.xml:16:1-34:12
+MERGED from [com.google.firebase:firebase-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.6.2.aar\3c5ad3f3a7b9a194191ceedfd098135d\AndroidManifest.xml:16:1-35:12
 MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\221a05bd47d0ce9761318da69376046e\AndroidManifest.xml:17:1-28:12
 MERGED from [com.android.support:transition:26.1.0] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\54618b5b6b5b2e68742722535420adf3\AndroidManifest.xml:17:1-28:12
 MERGED from [com.google.android.gms:play-services-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-analytics-11.6.2.aar\b9436b50ed4858850041c03525f2c15a\AndroidManifest.xml:16:1-33:12
-MERGED from [com.google.android.gms:play-services-tagmanager:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-11.6.2.aar\f50e93f6637806f3af3ddaa82b16adae\AndroidManifest.xml:16:1-18:12
 MERGED from [com.google.android.gms:play-services-tagmanager-v4-impl:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-v4-impl-11.6.2.aar\36b281fa454cca9a43914c19d2bacf4d\AndroidManifest.xml:16:1-20:12
 MERGED from [com.google.android.gms:play-services-analytics-impl:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-analytics-impl-11.6.2.aar\4b0db7f31089b85b22e7104e7bac25f4\AndroidManifest.xml:16:1-27:12
 MERGED from [com.google.android.gms:play-services-appinvite:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-appinvite-11.6.2.aar\fa7260d52afe77144e28f8d815d3e503\AndroidManifest.xml:16:1-27:12
@@ -48,10 +52,7 @@ MERGED from [com.google.android.gms:play-services-vision-common:11.6.2] C:\Users
 MERGED from [com.google.android.gms:play-services-wearable:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-wearable-11.6.2.aar\12b1118a11e543d8666be5dc2c91505b\AndroidManifest.xml:16:1-19:12
 MERGED from [com.google.android.gms:play-services-base:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-base-11.6.2.aar\03d0fb669e163e60f96f48e0cd5bc381\AndroidManifest.xml:16:1-21:12
 MERGED from [com.google.firebase:firebase-database-connection:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-database-connection-11.6.2.aar\d23673006aaecd824c8b662ba828c3f7\AndroidManifest.xml:2:1-4:12
-MERGED from [com.google.firebase:firebase-crash:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-crash-11.6.2.aar\59a542fbf2f100f46e744141009fe091\AndroidManifest.xml:16:1-25:12
 MERGED from [com.google.firebase:firebase-messaging:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-messaging-11.6.2.aar\0720caa78b8dbace05d00540bb05004f\AndroidManifest.xml:16:1-30:12
-MERGED from [com.google.android.gms:play-services-tagmanager-api:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.6.2.aar\94f1dedb69e267d661ba9bf7ab95299f\AndroidManifest.xml:16:1-34:12
-MERGED from [com.google.firebase:firebase-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.6.2.aar\3c5ad3f3a7b9a194191ceedfd098135d\AndroidManifest.xml:16:1-35:12
 MERGED from [com.google.firebase:firebase-analytics-impl:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.6.2.aar\c4b9de3a62aee761d95b9ab5cabf4c3a\AndroidManifest.xml:16:1-29:12
 MERGED from [com.google.firebase:firebase-iid:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.6.2.aar\60c4722d229053ff377e86136d5ea844\AndroidManifest.xml:16:1-47:12
 MERGED from [com.google.firebase:firebase-storage:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-storage-11.6.2.aar\9fae1c742cef27ab0256a2b63b4a2df0\AndroidManifest.xml:2:1-4:12
@@ -73,6 +74,7 @@ MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\sadowsm3\.g
 MERGED from [com.android.support:support-compat:26.1.0] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\f3582b54a6a8a931f01de73874402ead\AndroidManifest.xml:17:1-31:12
 MERGED from [com.google.android.gms:play-services-maps-license:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-maps-license-11.6.2.aar\e74074b1e8efc055bd3c794d914c3943\AndroidManifest.xml:2:1-6:12
 MERGED from [com.google.firebase:firebase-database-license:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-database-license-11.6.2.aar\3cf4287b21a78a491aaf4c609e3da131\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.firebase:firebase-analytics-license:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-license-11.6.2.aar\3b4e67c2ec20d789f6966c1bd78362ea\AndroidManifest.xml:2:1-6:12
 MERGED from [com.google.android.gms:play-services-base-license:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-base-license-11.6.2.aar\351e085bc278e02d007fcfa4e787ca84\AndroidManifest.xml:2:1-6:12
 MERGED from [com.google.android.gms:play-services-basement-license:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-basement-license-11.6.2.aar\579b4b7d309b68608f98f5b8a63994fb\AndroidManifest.xml:2:1-6:12
 MERGED from [com.google.firebase:firebase-database-connection-license:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-database-connection-license-11.6.2.aar\61ea69228ac9dfd88e87c94f0f4d239f\AndroidManifest.xml:2:1-6:12
@@ -107,7 +109,6 @@ MERGED from [com.google.android.gms:play-services-identity-license:11.6.2] C:\Us
 MERGED from [com.google.android.gms:play-services-iid-license:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-iid-license-11.6.2.aar\d8bb12f7a8820483f22d8722345a4adb\AndroidManifest.xml:2:1-6:12
 MERGED from [com.google.android.gms:play-services-instantapps-license:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-instantapps-license-11.6.2.aar\11bc0482dbc8244608eb8f9431686234\AndroidManifest.xml:2:1-6:12
 MERGED from [com.google.android.gms:play-services-location-license:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-location-license-11.6.2.aar\d8aff42064292e984043e775defe0af7\AndroidManifest.xml:2:1-6:12
-MERGED from [com.google.firebase:firebase-analytics-license:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-license-11.6.2.aar\3b4e67c2ec20d789f6966c1bd78362ea\AndroidManifest.xml:2:1-6:12
 MERGED from [com.google.firebase:firebase-analytics-impl-license:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-license-11.6.2.aar\8f75201e050c9178e8a6101f2fae7522\AndroidManifest.xml:2:1-6:12
 MERGED from [com.google.android.gms:play-services-nearby-license:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-nearby-license-11.6.2.aar\31e7ba245bddb692f7ab873d0053ca05\AndroidManifest.xml:2:1-6:12
 MERGED from [com.google.android.gms:play-services-panorama-license:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-panorama-license-11.6.2.aar\edf52182eccad1f454509a44de5c1cb6\AndroidManifest.xml:2:1-6:12
@@ -122,20 +123,20 @@ MERGED from [com.google.android.gms:play-services-vision-license:11.6.2] C:\User
 MERGED from [com.google.android.gms:play-services-wallet-license:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-wallet-license-11.6.2.aar\654defda391bcdaf243f6f9fdd421b68\AndroidManifest.xml:2:1-6:12
 MERGED from [com.google.android.gms:play-services-wearable-license:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-wearable-license-11.6.2.aar\9379fb69b88b32c9d7b3b76c7ed1ea93\AndroidManifest.xml:2:1-6:12
 MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\dcaaab114d2e933dc3ca0a8e968672fd\AndroidManifest.xml:17:1-30:12
-INJECTED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml:2:1-49:12
-INJECTED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml:2:1-49:12
-INJECTED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml:2:1-49:12
+INJECTED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml:2:1-50:12
+INJECTED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml:2:1-50:12
+INJECTED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml:2:1-50:12
 	package
 		ADDED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml:3:5-47
 		INJECTED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml:2:1-49:12
+		ADDED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml:2:1-50:12
 		INJECTED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml:2:1-49:12
+		ADDED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml:2:1-50:12
 		INJECTED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml:2:11-69
@@ -143,6 +144,12 @@ uses-permission#android.permission.INTERNET
 ADDED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml:10:5-67
 MERGED from [com.google.android.gms:play-services-maps:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-maps-11.6.2.aar\7920732ce77ed52fa6ae679c1d5732c4\AndroidManifest.xml:20:5-66
 MERGED from [com.google.android.gms:play-services-maps:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-maps-11.6.2.aar\7920732ce77ed52fa6ae679c1d5732c4\AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-crash:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-crash-11.6.2.aar\59a542fbf2f100f46e744141009fe091\AndroidManifest.xml:18:5-66
+MERGED from [com.google.firebase:firebase-crash:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-crash-11.6.2.aar\59a542fbf2f100f46e744141009fe091\AndroidManifest.xml:18:5-66
+MERGED from [com.google.android.gms:play-services-tagmanager-api:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.6.2.aar\94f1dedb69e267d661ba9bf7ab95299f\AndroidManifest.xml:20:5-66
+MERGED from [com.google.android.gms:play-services-tagmanager-api:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.6.2.aar\94f1dedb69e267d661ba9bf7ab95299f\AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.6.2.aar\3c5ad3f3a7b9a194191ceedfd098135d\AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.6.2.aar\3c5ad3f3a7b9a194191ceedfd098135d\AndroidManifest.xml:20:5-66
 MERGED from [com.google.android.gms:play-services-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-analytics-11.6.2.aar\b9436b50ed4858850041c03525f2c15a\AndroidManifest.xml:20:5-66
 MERGED from [com.google.android.gms:play-services-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-analytics-11.6.2.aar\b9436b50ed4858850041c03525f2c15a\AndroidManifest.xml:20:5-66
 MERGED from [com.google.android.gms:play-services-analytics-impl:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-analytics-impl-11.6.2.aar\4b0db7f31089b85b22e7104e7bac25f4\AndroidManifest.xml:20:5-66
@@ -153,12 +160,6 @@ MERGED from [com.google.android.gms:play-services-gcm:11.6.2] C:\Users\sadowsm3\
 MERGED from [com.google.android.gms:play-services-gcm:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-gcm-11.6.2.aar\1a6cd805438493fc55c720b2328e911b\AndroidManifest.xml:21:5-66
 MERGED from [com.google.android.gms:play-services-iid:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-iid-11.6.2.aar\33461db0b88dc1f3358f4bc2d2f78c9e\AndroidManifest.xml:21:5-66
 MERGED from [com.google.android.gms:play-services-iid:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-iid-11.6.2.aar\33461db0b88dc1f3358f4bc2d2f78c9e\AndroidManifest.xml:21:5-66
-MERGED from [com.google.firebase:firebase-crash:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-crash-11.6.2.aar\59a542fbf2f100f46e744141009fe091\AndroidManifest.xml:18:5-66
-MERGED from [com.google.firebase:firebase-crash:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-crash-11.6.2.aar\59a542fbf2f100f46e744141009fe091\AndroidManifest.xml:18:5-66
-MERGED from [com.google.android.gms:play-services-tagmanager-api:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.6.2.aar\94f1dedb69e267d661ba9bf7ab95299f\AndroidManifest.xml:20:5-66
-MERGED from [com.google.android.gms:play-services-tagmanager-api:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.6.2.aar\94f1dedb69e267d661ba9bf7ab95299f\AndroidManifest.xml:20:5-66
-MERGED from [com.google.firebase:firebase-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.6.2.aar\3c5ad3f3a7b9a194191ceedfd098135d\AndroidManifest.xml:20:5-66
-MERGED from [com.google.firebase:firebase-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.6.2.aar\3c5ad3f3a7b9a194191ceedfd098135d\AndroidManifest.xml:20:5-66
 MERGED from [com.google.firebase:firebase-analytics-impl:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.6.2.aar\c4b9de3a62aee761d95b9ab5cabf4c3a\AndroidManifest.xml:20:5-66
 MERGED from [com.google.firebase:firebase-analytics-impl:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.6.2.aar\c4b9de3a62aee761d95b9ab5cabf4c3a\AndroidManifest.xml:20:5-66
 MERGED from [com.google.firebase:firebase-iid:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.6.2.aar\60c4722d229053ff377e86136d5ea844\AndroidManifest.xml:20:5-66
@@ -171,16 +172,16 @@ uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml:11:5-79
 MERGED from [com.google.android.gms:play-services-maps:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-maps-11.6.2.aar\7920732ce77ed52fa6ae679c1d5732c4\AndroidManifest.xml:19:5-78
 MERGED from [com.google.android.gms:play-services-maps:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-maps-11.6.2.aar\7920732ce77ed52fa6ae679c1d5732c4\AndroidManifest.xml:19:5-78
+MERGED from [com.google.android.gms:play-services-tagmanager-api:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.6.2.aar\94f1dedb69e267d661ba9bf7ab95299f\AndroidManifest.xml:21:5-78
+MERGED from [com.google.android.gms:play-services-tagmanager-api:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.6.2.aar\94f1dedb69e267d661ba9bf7ab95299f\AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.6.2.aar\3c5ad3f3a7b9a194191ceedfd098135d\AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.6.2.aar\3c5ad3f3a7b9a194191ceedfd098135d\AndroidManifest.xml:21:5-78
 MERGED from [com.google.android.gms:play-services-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-analytics-11.6.2.aar\b9436b50ed4858850041c03525f2c15a\AndroidManifest.xml:21:5-78
 MERGED from [com.google.android.gms:play-services-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-analytics-11.6.2.aar\b9436b50ed4858850041c03525f2c15a\AndroidManifest.xml:21:5-78
 MERGED from [com.google.android.gms:play-services-analytics-impl:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-analytics-impl-11.6.2.aar\4b0db7f31089b85b22e7104e7bac25f4\AndroidManifest.xml:21:5-78
 MERGED from [com.google.android.gms:play-services-analytics-impl:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-analytics-impl-11.6.2.aar\4b0db7f31089b85b22e7104e7bac25f4\AndroidManifest.xml:21:5-78
 MERGED from [com.google.android.gms:play-services-nearby:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-nearby-11.6.2.aar\72b4a653f7f87fb8025c19ebe93b0db5\AndroidManifest.xml:4:5-78
 MERGED from [com.google.android.gms:play-services-nearby:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-nearby-11.6.2.aar\72b4a653f7f87fb8025c19ebe93b0db5\AndroidManifest.xml:4:5-78
-MERGED from [com.google.android.gms:play-services-tagmanager-api:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.6.2.aar\94f1dedb69e267d661ba9bf7ab95299f\AndroidManifest.xml:21:5-78
-MERGED from [com.google.android.gms:play-services-tagmanager-api:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.6.2.aar\94f1dedb69e267d661ba9bf7ab95299f\AndroidManifest.xml:21:5-78
-MERGED from [com.google.firebase:firebase-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.6.2.aar\3c5ad3f3a7b9a194191ceedfd098135d\AndroidManifest.xml:21:5-78
-MERGED from [com.google.firebase:firebase-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.6.2.aar\3c5ad3f3a7b9a194191ceedfd098135d\AndroidManifest.xml:21:5-78
 MERGED from [com.google.firebase:firebase-analytics-impl:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.6.2.aar\c4b9de3a62aee761d95b9ab5cabf4c3a\AndroidManifest.xml:21:5-78
 MERGED from [com.google.firebase:firebase-analytics-impl:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.6.2.aar\c4b9de3a62aee761d95b9ab5cabf4c3a\AndroidManifest.xml:21:5-78
 MERGED from [com.google.firebase:firebase-iid:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.6.2.aar\60c4722d229053ff377e86136d5ea844\AndroidManifest.xml:19:5-78
@@ -198,7 +199,9 @@ ADDED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\mai
 	android:name
 		ADDED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml:13:22-76
 application
-ADDED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml:15:5-47:19
+ADDED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml:15:5-48:19
+MERGED from [com.google.firebase:firebase-core:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-core-11.6.2.aar\1a895e44e5a18de62a921c58c693cecf\AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-core:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-core-11.6.2.aar\1a895e44e5a18de62a921c58c693cecf\AndroidManifest.xml:5:5-20
 MERGED from [com.android.support:design:26.1.0] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\c8776772b3f7063931472010dd7d1daf\AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:design:26.1.0] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\c8776772b3f7063931472010dd7d1daf\AndroidManifest.xml:25:5-29:19
 MERGED from [com.google.android.gms:play-services:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-11.6.2.aar\8b16346e7b29e92fe2facce58f7a24bd\AndroidManifest.xml:5:5-20
@@ -219,6 +222,12 @@ MERGED from [com.google.android.gms:play-services-places:11.6.2] C:\Users\sadows
 MERGED from [com.google.android.gms:play-services-places:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-places-11.6.2.aar\7bed927f4ef6e76b0851db33a8afa737\AndroidManifest.xml:18:5-19
 MERGED from [com.google.android.gms:play-services-maps:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-maps-11.6.2.aar\7920732ce77ed52fa6ae679c1d5732c4\AndroidManifest.xml:24:5-19
 MERGED from [com.google.android.gms:play-services-maps:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-maps-11.6.2.aar\7920732ce77ed52fa6ae679c1d5732c4\AndroidManifest.xml:24:5-19
+MERGED from [com.google.firebase:firebase-crash:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-crash-11.6.2.aar\59a542fbf2f100f46e744141009fe091\AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.firebase:firebase-crash:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-crash-11.6.2.aar\59a542fbf2f100f46e744141009fe091\AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.gms:play-services-tagmanager-api:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.6.2.aar\94f1dedb69e267d661ba9bf7ab95299f\AndroidManifest.xml:23:5-33:19
+MERGED from [com.google.android.gms:play-services-tagmanager-api:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.6.2.aar\94f1dedb69e267d661ba9bf7ab95299f\AndroidManifest.xml:23:5-33:19
+MERGED from [com.google.firebase:firebase-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.6.2.aar\3c5ad3f3a7b9a194191ceedfd098135d\AndroidManifest.xml:24:5-34:19
+MERGED from [com.google.firebase:firebase-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.6.2.aar\3c5ad3f3a7b9a194191ceedfd098135d\AndroidManifest.xml:24:5-34:19
 MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\221a05bd47d0ce9761318da69376046e\AndroidManifest.xml:22:5-26:19
 MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\221a05bd47d0ce9761318da69376046e\AndroidManifest.xml:22:5-26:19
 MERGED from [com.android.support:transition:26.1.0] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\54618b5b6b5b2e68742722535420adf3\AndroidManifest.xml:22:5-26:19
@@ -273,14 +282,8 @@ MERGED from [com.google.android.gms:play-services-wearable:11.6.2] C:\Users\sado
 MERGED from [com.google.android.gms:play-services-wearable:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-wearable-11.6.2.aar\12b1118a11e543d8666be5dc2c91505b\AndroidManifest.xml:18:5-19
 MERGED from [com.google.android.gms:play-services-base:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-base-11.6.2.aar\03d0fb669e163e60f96f48e0cd5bc381\AndroidManifest.xml:18:5-20:19
 MERGED from [com.google.android.gms:play-services-base:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-base-11.6.2.aar\03d0fb669e163e60f96f48e0cd5bc381\AndroidManifest.xml:18:5-20:19
-MERGED from [com.google.firebase:firebase-crash:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-crash-11.6.2.aar\59a542fbf2f100f46e744141009fe091\AndroidManifest.xml:22:5-23:19
-MERGED from [com.google.firebase:firebase-crash:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-crash-11.6.2.aar\59a542fbf2f100f46e744141009fe091\AndroidManifest.xml:22:5-23:19
 MERGED from [com.google.firebase:firebase-messaging:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-messaging-11.6.2.aar\0720caa78b8dbace05d00540bb05004f\AndroidManifest.xml:19:5-29:19
 MERGED from [com.google.firebase:firebase-messaging:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-messaging-11.6.2.aar\0720caa78b8dbace05d00540bb05004f\AndroidManifest.xml:19:5-29:19
-MERGED from [com.google.android.gms:play-services-tagmanager-api:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.6.2.aar\94f1dedb69e267d661ba9bf7ab95299f\AndroidManifest.xml:23:5-33:19
-MERGED from [com.google.android.gms:play-services-tagmanager-api:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.6.2.aar\94f1dedb69e267d661ba9bf7ab95299f\AndroidManifest.xml:23:5-33:19
-MERGED from [com.google.firebase:firebase-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.6.2.aar\3c5ad3f3a7b9a194191ceedfd098135d\AndroidManifest.xml:24:5-34:19
-MERGED from [com.google.firebase:firebase-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.6.2.aar\3c5ad3f3a7b9a194191ceedfd098135d\AndroidManifest.xml:24:5-34:19
 MERGED from [com.google.firebase:firebase-analytics-impl:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.6.2.aar\c4b9de3a62aee761d95b9ab5cabf4c3a\AndroidManifest.xml:24:5-28:19
 MERGED from [com.google.firebase:firebase-analytics-impl:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.6.2.aar\c4b9de3a62aee761d95b9ab5cabf4c3a\AndroidManifest.xml:24:5-28:19
 MERGED from [com.google.firebase:firebase-iid:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.6.2.aar\60c4722d229053ff377e86136d5ea844\AndroidManifest.xml:29:5-46:19
@@ -317,6 +320,8 @@ MERGED from [com.google.android.gms:play-services-maps-license:11.6.2] C:\Users\
 MERGED from [com.google.android.gms:play-services-maps-license:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-maps-license-11.6.2.aar\e74074b1e8efc055bd3c794d914c3943\AndroidManifest.xml:5:5-20
 MERGED from [com.google.firebase:firebase-database-license:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-database-license-11.6.2.aar\3cf4287b21a78a491aaf4c609e3da131\AndroidManifest.xml:5:5-20
 MERGED from [com.google.firebase:firebase-database-license:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-database-license-11.6.2.aar\3cf4287b21a78a491aaf4c609e3da131\AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-analytics-license:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-license-11.6.2.aar\3b4e67c2ec20d789f6966c1bd78362ea\AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-analytics-license:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-license-11.6.2.aar\3b4e67c2ec20d789f6966c1bd78362ea\AndroidManifest.xml:5:5-20
 MERGED from [com.google.android.gms:play-services-base-license:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-base-license-11.6.2.aar\351e085bc278e02d007fcfa4e787ca84\AndroidManifest.xml:5:5-20
 MERGED from [com.google.android.gms:play-services-base-license:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-base-license-11.6.2.aar\351e085bc278e02d007fcfa4e787ca84\AndroidManifest.xml:5:5-20
 MERGED from [com.google.android.gms:play-services-basement-license:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-basement-license-11.6.2.aar\579b4b7d309b68608f98f5b8a63994fb\AndroidManifest.xml:5:5-20
@@ -385,8 +390,6 @@ MERGED from [com.google.android.gms:play-services-instantapps-license:11.6.2] C:
 MERGED from [com.google.android.gms:play-services-instantapps-license:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-instantapps-license-11.6.2.aar\11bc0482dbc8244608eb8f9431686234\AndroidManifest.xml:5:5-20
 MERGED from [com.google.android.gms:play-services-location-license:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-location-license-11.6.2.aar\d8aff42064292e984043e775defe0af7\AndroidManifest.xml:5:5-20
 MERGED from [com.google.android.gms:play-services-location-license:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-location-license-11.6.2.aar\d8aff42064292e984043e775defe0af7\AndroidManifest.xml:5:5-20
-MERGED from [com.google.firebase:firebase-analytics-license:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-license-11.6.2.aar\3b4e67c2ec20d789f6966c1bd78362ea\AndroidManifest.xml:5:5-20
-MERGED from [com.google.firebase:firebase-analytics-license:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-license-11.6.2.aar\3b4e67c2ec20d789f6966c1bd78362ea\AndroidManifest.xml:5:5-20
 MERGED from [com.google.firebase:firebase-analytics-impl-license:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-license-11.6.2.aar\8f75201e050c9178e8a6101f2fae7522\AndroidManifest.xml:5:5-20
 MERGED from [com.google.firebase:firebase-analytics-impl-license:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-license-11.6.2.aar\8f75201e050c9178e8a6101f2fae7522\AndroidManifest.xml:5:5-20
 MERGED from [com.google.android.gms:play-services-nearby-license:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-nearby-license-11.6.2.aar\31e7ba245bddb692f7ab873d0053ca05\AndroidManifest.xml:5:5-20
@@ -452,15 +455,21 @@ ADDED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\mai
 	android:name
 		ADDED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml:41:13-58
 activity#com.example.sadowsm3.mapfirebase.MapsActivity2
-ADDED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml:44:9-46:69
+ADDED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml:44:9-46:60
 	android:label
 		ADDED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml:46:13-57
 	android:name
 		ADDED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml:45:13-42
+activity#com.example.sadowsm3.mapfirebase.LocationEdit
+ADDED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml:47:9-59
+	android:name
+		ADDED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml:47:19-47
 uses-sdk
 INJECTED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml
 INJECTED from C:\Users\sadowsm3\Documents\pjatk- repository\MapFirebase\app\src\main\AndroidManifest.xml
+MERGED from [com.google.firebase:firebase-core:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-core-11.6.2.aar\1a895e44e5a18de62a921c58c693cecf\AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-core:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-core-11.6.2.aar\1a895e44e5a18de62a921c58c693cecf\AndroidManifest.xml:4:5-43
 MERGED from [com.android.support:design:26.1.0] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\c8776772b3f7063931472010dd7d1daf\AndroidManifest.xml:21:5-23:62
 MERGED from [com.android.support:design:26.1.0] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\c8776772b3f7063931472010dd7d1daf\AndroidManifest.xml:21:5-23:62
 MERGED from [com.google.android.gms:play-services:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-11.6.2.aar\8b16346e7b29e92fe2facce58f7a24bd\AndroidManifest.xml:4:5-43
@@ -485,14 +494,20 @@ MERGED from [com.google.android.gms:play-services-maps:11.6.2] C:\Users\sadowsm3
 MERGED from [com.google.android.gms:play-services-maps:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-maps-11.6.2.aar\7920732ce77ed52fa6ae679c1d5732c4\AndroidManifest.xml:23:5-43
 MERGED from [com.google.firebase:firebase-database:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-database-11.6.2.aar\1770880984eaa621f37106e40f7f2317\AndroidManifest.xml:3:5-43
 MERGED from [com.google.firebase:firebase-database:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-database-11.6.2.aar\1770880984eaa621f37106e40f7f2317\AndroidManifest.xml:3:5-43
+MERGED from [com.google.firebase:firebase-crash:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-crash-11.6.2.aar\59a542fbf2f100f46e744141009fe091\AndroidManifest.xml:20:5-43
+MERGED from [com.google.firebase:firebase-crash:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-crash-11.6.2.aar\59a542fbf2f100f46e744141009fe091\AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services-tagmanager:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-11.6.2.aar\f50e93f6637806f3af3ddaa82b16adae\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-tagmanager:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-11.6.2.aar\f50e93f6637806f3af3ddaa82b16adae\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-tagmanager-api:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.6.2.aar\94f1dedb69e267d661ba9bf7ab95299f\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-tagmanager-api:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.6.2.aar\94f1dedb69e267d661ba9bf7ab95299f\AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.6.2.aar\3c5ad3f3a7b9a194191ceedfd098135d\AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.6.2.aar\3c5ad3f3a7b9a194191ceedfd098135d\AndroidManifest.xml:17:5-43
 MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\221a05bd47d0ce9761318da69376046e\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\221a05bd47d0ce9761318da69376046e\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:transition:26.1.0] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\54618b5b6b5b2e68742722535420adf3\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:transition:26.1.0] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\54618b5b6b5b2e68742722535420adf3\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-analytics-11.6.2.aar\b9436b50ed4858850041c03525f2c15a\AndroidManifest.xml:17:5-43
 MERGED from [com.google.android.gms:play-services-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-analytics-11.6.2.aar\b9436b50ed4858850041c03525f2c15a\AndroidManifest.xml:17:5-43
-MERGED from [com.google.android.gms:play-services-tagmanager:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-11.6.2.aar\f50e93f6637806f3af3ddaa82b16adae\AndroidManifest.xml:17:5-43
-MERGED from [com.google.android.gms:play-services-tagmanager:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-11.6.2.aar\f50e93f6637806f3af3ddaa82b16adae\AndroidManifest.xml:17:5-43
 MERGED from [com.google.android.gms:play-services-tagmanager-v4-impl:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-v4-impl-11.6.2.aar\36b281fa454cca9a43914c19d2bacf4d\AndroidManifest.xml:17:5-43
 MERGED from [com.google.android.gms:play-services-tagmanager-v4-impl:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-v4-impl-11.6.2.aar\36b281fa454cca9a43914c19d2bacf4d\AndroidManifest.xml:17:5-43
 MERGED from [com.google.android.gms:play-services-analytics-impl:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-analytics-impl-11.6.2.aar\4b0db7f31089b85b22e7104e7bac25f4\AndroidManifest.xml:17:5-43
@@ -549,14 +564,8 @@ MERGED from [com.google.android.gms:play-services-base:11.6.2] C:\Users\sadowsm3
 MERGED from [com.google.android.gms:play-services-base:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-base-11.6.2.aar\03d0fb669e163e60f96f48e0cd5bc381\AndroidManifest.xml:17:5-43
 MERGED from [com.google.firebase:firebase-database-connection:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-database-connection-11.6.2.aar\d23673006aaecd824c8b662ba828c3f7\AndroidManifest.xml:3:5-43
 MERGED from [com.google.firebase:firebase-database-connection:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-database-connection-11.6.2.aar\d23673006aaecd824c8b662ba828c3f7\AndroidManifest.xml:3:5-43
-MERGED from [com.google.firebase:firebase-crash:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-crash-11.6.2.aar\59a542fbf2f100f46e744141009fe091\AndroidManifest.xml:20:5-43
-MERGED from [com.google.firebase:firebase-crash:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-crash-11.6.2.aar\59a542fbf2f100f46e744141009fe091\AndroidManifest.xml:20:5-43
 MERGED from [com.google.firebase:firebase-messaging:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-messaging-11.6.2.aar\0720caa78b8dbace05d00540bb05004f\AndroidManifest.xml:17:5-43
 MERGED from [com.google.firebase:firebase-messaging:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-messaging-11.6.2.aar\0720caa78b8dbace05d00540bb05004f\AndroidManifest.xml:17:5-43
-MERGED from [com.google.android.gms:play-services-tagmanager-api:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.6.2.aar\94f1dedb69e267d661ba9bf7ab95299f\AndroidManifest.xml:17:5-43
-MERGED from [com.google.android.gms:play-services-tagmanager-api:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.6.2.aar\94f1dedb69e267d661ba9bf7ab95299f\AndroidManifest.xml:17:5-43
-MERGED from [com.google.firebase:firebase-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.6.2.aar\3c5ad3f3a7b9a194191ceedfd098135d\AndroidManifest.xml:17:5-43
-MERGED from [com.google.firebase:firebase-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.6.2.aar\3c5ad3f3a7b9a194191ceedfd098135d\AndroidManifest.xml:17:5-43
 MERGED from [com.google.firebase:firebase-analytics-impl:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.6.2.aar\c4b9de3a62aee761d95b9ab5cabf4c3a\AndroidManifest.xml:17:5-43
 MERGED from [com.google.firebase:firebase-analytics-impl:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.6.2.aar\c4b9de3a62aee761d95b9ab5cabf4c3a\AndroidManifest.xml:17:5-43
 MERGED from [com.google.firebase:firebase-iid:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.6.2.aar\60c4722d229053ff377e86136d5ea844\AndroidManifest.xml:17:5-43
@@ -599,6 +608,8 @@ MERGED from [com.google.android.gms:play-services-maps-license:11.6.2] C:\Users\
 MERGED from [com.google.android.gms:play-services-maps-license:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-maps-license-11.6.2.aar\e74074b1e8efc055bd3c794d914c3943\AndroidManifest.xml:4:5-43
 MERGED from [com.google.firebase:firebase-database-license:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-database-license-11.6.2.aar\3cf4287b21a78a491aaf4c609e3da131\AndroidManifest.xml:4:5-43
 MERGED from [com.google.firebase:firebase-database-license:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-database-license-11.6.2.aar\3cf4287b21a78a491aaf4c609e3da131\AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-analytics-license:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-license-11.6.2.aar\3b4e67c2ec20d789f6966c1bd78362ea\AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-analytics-license:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-license-11.6.2.aar\3b4e67c2ec20d789f6966c1bd78362ea\AndroidManifest.xml:4:5-43
 MERGED from [com.google.android.gms:play-services-base-license:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-base-license-11.6.2.aar\351e085bc278e02d007fcfa4e787ca84\AndroidManifest.xml:4:5-43
 MERGED from [com.google.android.gms:play-services-base-license:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-base-license-11.6.2.aar\351e085bc278e02d007fcfa4e787ca84\AndroidManifest.xml:4:5-43
 MERGED from [com.google.android.gms:play-services-basement-license:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-basement-license-11.6.2.aar\579b4b7d309b68608f98f5b8a63994fb\AndroidManifest.xml:4:5-43
@@ -667,8 +678,6 @@ MERGED from [com.google.android.gms:play-services-instantapps-license:11.6.2] C:
 MERGED from [com.google.android.gms:play-services-instantapps-license:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-instantapps-license-11.6.2.aar\11bc0482dbc8244608eb8f9431686234\AndroidManifest.xml:4:5-43
 MERGED from [com.google.android.gms:play-services-location-license:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-location-license-11.6.2.aar\d8aff42064292e984043e775defe0af7\AndroidManifest.xml:4:5-43
 MERGED from [com.google.android.gms:play-services-location-license:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-location-license-11.6.2.aar\d8aff42064292e984043e775defe0af7\AndroidManifest.xml:4:5-43
-MERGED from [com.google.firebase:firebase-analytics-license:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-license-11.6.2.aar\3b4e67c2ec20d789f6966c1bd78362ea\AndroidManifest.xml:4:5-43
-MERGED from [com.google.firebase:firebase-analytics-license:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-license-11.6.2.aar\3b4e67c2ec20d789f6966c1bd78362ea\AndroidManifest.xml:4:5-43
 MERGED from [com.google.firebase:firebase-analytics-impl-license:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-license-11.6.2.aar\8f75201e050c9178e8a6101f2fae7522\AndroidManifest.xml:4:5-43
 MERGED from [com.google.firebase:firebase-analytics-impl-license:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-license-11.6.2.aar\8f75201e050c9178e8a6101f2fae7522\AndroidManifest.xml:4:5-43
 MERGED from [com.google.android.gms:play-services-nearby-license:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-nearby-license-11.6.2.aar\31e7ba245bddb692f7ab873d0053ca05\AndroidManifest.xml:4:5-43
@@ -755,18 +764,98 @@ ADDED from [com.google.android.gms:play-services-maps:11.6.2] C:\Users\sadowsm3\
 		ADDED from [com.google.android.gms:play-services-maps:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-maps-11.6.2.aar\7920732ce77ed52fa6ae679c1d5732c4\AndroidManifest.xml:21:19-51
 	android:required
 		ADDED from [com.google.android.gms:play-services-maps:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-maps-11.6.2.aar\7920732ce77ed52fa6ae679c1d5732c4\AndroidManifest.xml:21:52-75
+service#com.google.android.gms.tagmanager.TagManagerService
+ADDED from [com.google.android.gms:play-services-tagmanager-api:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.6.2.aar\94f1dedb69e267d661ba9bf7ab95299f\AndroidManifest.xml:24:9-134
+	android:enabled
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.6.2.aar\94f1dedb69e267d661ba9bf7ab95299f\AndroidManifest.xml:24:110-132
+	android:exported
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.6.2.aar\94f1dedb69e267d661ba9bf7ab95299f\AndroidManifest.xml:24:85-109
+	android:name
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.6.2.aar\94f1dedb69e267d661ba9bf7ab95299f\AndroidManifest.xml:24:18-84
+activity#com.google.android.gms.tagmanager.TagManagerPreviewActivity
+ADDED from [com.google.android.gms:play-services-tagmanager-api:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.6.2.aar\94f1dedb69e267d661ba9bf7ab95299f\AndroidManifest.xml:25:9-32:20
+	android:noHistory
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.6.2.aar\94f1dedb69e267d661ba9bf7ab95299f\AndroidManifest.xml:25:118-142
+	android:exported
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.6.2.aar\94f1dedb69e267d661ba9bf7ab95299f\AndroidManifest.xml:25:94-117
+	android:name
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.6.2.aar\94f1dedb69e267d661ba9bf7ab95299f\AndroidManifest.xml:25:19-93
+intent-filter#android.intent.action.VIEW+android.intent.category.BROWSABLE+android.intent.category.DEFAULT
+ADDED from [com.google.android.gms:play-services-tagmanager-api:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.6.2.aar\94f1dedb69e267d661ba9bf7ab95299f\AndroidManifest.xml:26:13-31:29
+data
+ADDED from [com.google.android.gms:play-services-tagmanager-api:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.6.2.aar\94f1dedb69e267d661ba9bf7ab95299f\AndroidManifest.xml:27:17-71
+	android:scheme
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.6.2.aar\94f1dedb69e267d661ba9bf7ab95299f\AndroidManifest.xml:27:23-69
+action#android.intent.action.VIEW
+ADDED from [com.google.android.gms:play-services-tagmanager-api:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.6.2.aar\94f1dedb69e267d661ba9bf7ab95299f\AndroidManifest.xml:28:17-68
+	android:name
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.6.2.aar\94f1dedb69e267d661ba9bf7ab95299f\AndroidManifest.xml:28:25-66
+category#android.intent.category.DEFAULT
+ADDED from [com.google.android.gms:play-services-tagmanager-api:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.6.2.aar\94f1dedb69e267d661ba9bf7ab95299f\AndroidManifest.xml:29:17-75
+	android:name
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.6.2.aar\94f1dedb69e267d661ba9bf7ab95299f\AndroidManifest.xml:29:27-73
+category#android.intent.category.BROWSABLE
+ADDED from [com.google.android.gms:play-services-tagmanager-api:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.6.2.aar\94f1dedb69e267d661ba9bf7ab95299f\AndroidManifest.xml:30:17-77
+	android:name
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.6.2.aar\94f1dedb69e267d661ba9bf7ab95299f\AndroidManifest.xml:30:27-75
 uses-permission#android.permission.WAKE_LOCK
-ADDED from [com.google.android.gms:play-services-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-analytics-11.6.2.aar\b9436b50ed4858850041c03525f2c15a\AndroidManifest.xml:24:5-67
+ADDED from [com.google.firebase:firebase-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.6.2.aar\3c5ad3f3a7b9a194191ceedfd098135d\AndroidManifest.xml:22:5-67
+MERGED from [com.google.android.gms:play-services-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-analytics-11.6.2.aar\b9436b50ed4858850041c03525f2c15a\AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-analytics-11.6.2.aar\b9436b50ed4858850041c03525f2c15a\AndroidManifest.xml:24:5-67
 MERGED from [com.google.android.gms:play-services-analytics-impl:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-analytics-impl-11.6.2.aar\4b0db7f31089b85b22e7104e7bac25f4\AndroidManifest.xml:24:5-67
 MERGED from [com.google.android.gms:play-services-analytics-impl:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-analytics-impl-11.6.2.aar\4b0db7f31089b85b22e7104e7bac25f4\AndroidManifest.xml:24:5-67
-MERGED from [com.google.firebase:firebase-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.6.2.aar\3c5ad3f3a7b9a194191ceedfd098135d\AndroidManifest.xml:22:5-67
-MERGED from [com.google.firebase:firebase-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.6.2.aar\3c5ad3f3a7b9a194191ceedfd098135d\AndroidManifest.xml:22:5-67
 MERGED from [com.google.firebase:firebase-analytics-impl:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.6.2.aar\c4b9de3a62aee761d95b9ab5cabf4c3a\AndroidManifest.xml:22:5-67
 MERGED from [com.google.firebase:firebase-analytics-impl:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.6.2.aar\c4b9de3a62aee761d95b9ab5cabf4c3a\AndroidManifest.xml:22:5-67
 MERGED from [com.google.firebase:firebase-iid:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.6.2.aar\60c4722d229053ff377e86136d5ea844\AndroidManifest.xml:21:5-67
 MERGED from [com.google.firebase:firebase-iid:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.6.2.aar\60c4722d229053ff377e86136d5ea844\AndroidManifest.xml:21:5-67
 	android:name
-		ADDED from [com.google.android.gms:play-services-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-analytics-11.6.2.aar\b9436b50ed4858850041c03525f2c15a\AndroidManifest.xml:24:22-65
+		ADDED from [com.google.firebase:firebase-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.6.2.aar\3c5ad3f3a7b9a194191ceedfd098135d\AndroidManifest.xml:22:22-65
+receiver#com.google.android.gms.measurement.AppMeasurementReceiver
+ADDED from [com.google.firebase:firebase-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.6.2.aar\3c5ad3f3a7b9a194191ceedfd098135d\AndroidManifest.xml:25:7-26:18
+MERGED from [com.google.firebase:firebase-analytics-impl:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.6.2.aar\c4b9de3a62aee761d95b9ab5cabf4c3a\AndroidManifest.xml:25:7-26:18
+MERGED from [com.google.firebase:firebase-analytics-impl:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.6.2.aar\c4b9de3a62aee761d95b9ab5cabf4c3a\AndroidManifest.xml:25:7-26:18
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.6.2.aar\3c5ad3f3a7b9a194191ceedfd098135d\AndroidManifest.xml:25:90-112
+	android:exported
+		ADDED from [com.google.firebase:firebase-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.6.2.aar\3c5ad3f3a7b9a194191ceedfd098135d\AndroidManifest.xml:25:113-137
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.6.2.aar\3c5ad3f3a7b9a194191ceedfd098135d\AndroidManifest.xml:25:17-89
+receiver#com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver
+ADDED from [com.google.firebase:firebase-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.6.2.aar\3c5ad3f3a7b9a194191ceedfd098135d\AndroidManifest.xml:27:7-31:18
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.6.2.aar\3c5ad3f3a7b9a194191ceedfd098135d\AndroidManifest.xml:27:162-184
+	android:exported
+		ADDED from [com.google.firebase:firebase-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.6.2.aar\3c5ad3f3a7b9a194191ceedfd098135d\AndroidManifest.xml:27:185-208
+	android:permission
+		ADDED from [com.google.firebase:firebase-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.6.2.aar\3c5ad3f3a7b9a194191ceedfd098135d\AndroidManifest.xml:27:105-161
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.6.2.aar\3c5ad3f3a7b9a194191ceedfd098135d\AndroidManifest.xml:27:17-104
+intent-filter#com.android.vending.INSTALL_REFERRER
+ADDED from [com.google.firebase:firebase-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.6.2.aar\3c5ad3f3a7b9a194191ceedfd098135d\AndroidManifest.xml:28:11-30:27
+action#com.android.vending.INSTALL_REFERRER
+ADDED from [com.google.firebase:firebase-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.6.2.aar\3c5ad3f3a7b9a194191ceedfd098135d\AndroidManifest.xml:29:15-76
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.6.2.aar\3c5ad3f3a7b9a194191ceedfd098135d\AndroidManifest.xml:29:23-74
+service#com.google.android.gms.measurement.AppMeasurementService
+ADDED from [com.google.firebase:firebase-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.6.2.aar\3c5ad3f3a7b9a194191ceedfd098135d\AndroidManifest.xml:32:7-137
+MERGED from [com.google.firebase:firebase-analytics-impl:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.6.2.aar\c4b9de3a62aee761d95b9ab5cabf4c3a\AndroidManifest.xml:27:7-137
+MERGED from [com.google.firebase:firebase-analytics-impl:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.6.2.aar\c4b9de3a62aee761d95b9ab5cabf4c3a\AndroidManifest.xml:27:7-137
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.6.2.aar\3c5ad3f3a7b9a194191ceedfd098135d\AndroidManifest.xml:32:88-110
+	android:exported
+		ADDED from [com.google.firebase:firebase-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.6.2.aar\3c5ad3f3a7b9a194191ceedfd098135d\AndroidManifest.xml:32:111-135
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.6.2.aar\3c5ad3f3a7b9a194191ceedfd098135d\AndroidManifest.xml:32:16-87
+service#com.google.android.gms.measurement.AppMeasurementJobService
+ADDED from [com.google.firebase:firebase-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.6.2.aar\3c5ad3f3a7b9a194191ceedfd098135d\AndroidManifest.xml:33:7-197
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.6.2.aar\3c5ad3f3a7b9a194191ceedfd098135d\AndroidManifest.xml:33:148-170
+	android:exported
+		ADDED from [com.google.firebase:firebase-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.6.2.aar\3c5ad3f3a7b9a194191ceedfd098135d\AndroidManifest.xml:33:171-195
+	android:permission
+		ADDED from [com.google.firebase:firebase-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.6.2.aar\3c5ad3f3a7b9a194191ceedfd098135d\AndroidManifest.xml:33:91-147
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.6.2.aar\3c5ad3f3a7b9a194191ceedfd098135d\AndroidManifest.xml:33:16-90
 receiver#com.google.android.gms.analytics.AnalyticsReceiver
 ADDED from [com.google.android.gms:play-services-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-analytics-11.6.2.aar\b9436b50ed4858850041c03525f2c15a\AndroidManifest.xml:27:9-28:20
 	android:enabled
@@ -807,10 +896,6 @@ action#com.google.android.gms.appinvite.ACTION_PREVIEW
 ADDED from [com.google.android.gms:play-services-appinvite:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-appinvite-11.6.2.aar\fa7260d52afe77144e28f8d815d3e503\AndroidManifest.xml:22:17-89
 	android:name
 		ADDED from [com.google.android.gms:play-services-appinvite:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-appinvite-11.6.2.aar\fa7260d52afe77144e28f8d815d3e503\AndroidManifest.xml:22:25-87
-category#android.intent.category.DEFAULT
-ADDED from [com.google.android.gms:play-services-appinvite:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-appinvite-11.6.2.aar\fa7260d52afe77144e28f8d815d3e503\AndroidManifest.xml:23:17-75
-	android:name
-		ADDED from [com.google.android.gms:play-services-appinvite:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-appinvite-11.6.2.aar\fa7260d52afe77144e28f8d815d3e503\AndroidManifest.xml:23:27-73
 activity#com.google.android.gms.auth.api.signin.internal.SignInHubActivity
 ADDED from [com.google.android.gms:play-services-auth:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-auth-11.6.2.aar\acaeb1518dc441db0369000381a0690a\AndroidManifest.xml:20:9-189
 	android:excludeFromRecents
@@ -859,82 +944,6 @@ action#com.google.firebase.MESSAGING_EVENT
 ADDED from [com.google.firebase:firebase-messaging:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-messaging-11.6.2.aar\0720caa78b8dbace05d00540bb05004f\AndroidManifest.xml:25:17-77
 	android:name
 		ADDED from [com.google.firebase:firebase-messaging:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-messaging-11.6.2.aar\0720caa78b8dbace05d00540bb05004f\AndroidManifest.xml:25:25-75
-service#com.google.android.gms.tagmanager.TagManagerService
-ADDED from [com.google.android.gms:play-services-tagmanager-api:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.6.2.aar\94f1dedb69e267d661ba9bf7ab95299f\AndroidManifest.xml:24:9-134
-	android:enabled
-		ADDED from [com.google.android.gms:play-services-tagmanager-api:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.6.2.aar\94f1dedb69e267d661ba9bf7ab95299f\AndroidManifest.xml:24:110-132
-	android:exported
-		ADDED from [com.google.android.gms:play-services-tagmanager-api:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.6.2.aar\94f1dedb69e267d661ba9bf7ab95299f\AndroidManifest.xml:24:85-109
-	android:name
-		ADDED from [com.google.android.gms:play-services-tagmanager-api:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.6.2.aar\94f1dedb69e267d661ba9bf7ab95299f\AndroidManifest.xml:24:18-84
-activity#com.google.android.gms.tagmanager.TagManagerPreviewActivity
-ADDED from [com.google.android.gms:play-services-tagmanager-api:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.6.2.aar\94f1dedb69e267d661ba9bf7ab95299f\AndroidManifest.xml:25:9-32:20
-	android:noHistory
-		ADDED from [com.google.android.gms:play-services-tagmanager-api:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.6.2.aar\94f1dedb69e267d661ba9bf7ab95299f\AndroidManifest.xml:25:118-142
-	android:exported
-		ADDED from [com.google.android.gms:play-services-tagmanager-api:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.6.2.aar\94f1dedb69e267d661ba9bf7ab95299f\AndroidManifest.xml:25:94-117
-	android:name
-		ADDED from [com.google.android.gms:play-services-tagmanager-api:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.6.2.aar\94f1dedb69e267d661ba9bf7ab95299f\AndroidManifest.xml:25:19-93
-intent-filter#android.intent.action.VIEW+android.intent.category.BROWSABLE+android.intent.category.DEFAULT
-ADDED from [com.google.android.gms:play-services-tagmanager-api:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.6.2.aar\94f1dedb69e267d661ba9bf7ab95299f\AndroidManifest.xml:26:13-31:29
-data
-ADDED from [com.google.android.gms:play-services-tagmanager-api:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.6.2.aar\94f1dedb69e267d661ba9bf7ab95299f\AndroidManifest.xml:27:17-71
-	android:scheme
-		ADDED from [com.google.android.gms:play-services-tagmanager-api:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.6.2.aar\94f1dedb69e267d661ba9bf7ab95299f\AndroidManifest.xml:27:23-69
-action#android.intent.action.VIEW
-ADDED from [com.google.android.gms:play-services-tagmanager-api:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.6.2.aar\94f1dedb69e267d661ba9bf7ab95299f\AndroidManifest.xml:28:17-68
-	android:name
-		ADDED from [com.google.android.gms:play-services-tagmanager-api:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.6.2.aar\94f1dedb69e267d661ba9bf7ab95299f\AndroidManifest.xml:28:25-66
-category#android.intent.category.BROWSABLE
-ADDED from [com.google.android.gms:play-services-tagmanager-api:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.6.2.aar\94f1dedb69e267d661ba9bf7ab95299f\AndroidManifest.xml:30:17-77
-	android:name
-		ADDED from [com.google.android.gms:play-services-tagmanager-api:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.6.2.aar\94f1dedb69e267d661ba9bf7ab95299f\AndroidManifest.xml:30:27-75
-receiver#com.google.android.gms.measurement.AppMeasurementReceiver
-ADDED from [com.google.firebase:firebase-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.6.2.aar\3c5ad3f3a7b9a194191ceedfd098135d\AndroidManifest.xml:25:7-26:18
-MERGED from [com.google.firebase:firebase-analytics-impl:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.6.2.aar\c4b9de3a62aee761d95b9ab5cabf4c3a\AndroidManifest.xml:25:7-26:18
-MERGED from [com.google.firebase:firebase-analytics-impl:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.6.2.aar\c4b9de3a62aee761d95b9ab5cabf4c3a\AndroidManifest.xml:25:7-26:18
-	android:enabled
-		ADDED from [com.google.firebase:firebase-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.6.2.aar\3c5ad3f3a7b9a194191ceedfd098135d\AndroidManifest.xml:25:90-112
-	android:exported
-		ADDED from [com.google.firebase:firebase-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.6.2.aar\3c5ad3f3a7b9a194191ceedfd098135d\AndroidManifest.xml:25:113-137
-	android:name
-		ADDED from [com.google.firebase:firebase-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.6.2.aar\3c5ad3f3a7b9a194191ceedfd098135d\AndroidManifest.xml:25:17-89
-receiver#com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver
-ADDED from [com.google.firebase:firebase-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.6.2.aar\3c5ad3f3a7b9a194191ceedfd098135d\AndroidManifest.xml:27:7-31:18
-	android:enabled
-		ADDED from [com.google.firebase:firebase-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.6.2.aar\3c5ad3f3a7b9a194191ceedfd098135d\AndroidManifest.xml:27:162-184
-	android:exported
-		ADDED from [com.google.firebase:firebase-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.6.2.aar\3c5ad3f3a7b9a194191ceedfd098135d\AndroidManifest.xml:27:185-208
-	android:permission
-		ADDED from [com.google.firebase:firebase-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.6.2.aar\3c5ad3f3a7b9a194191ceedfd098135d\AndroidManifest.xml:27:105-161
-	android:name
-		ADDED from [com.google.firebase:firebase-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.6.2.aar\3c5ad3f3a7b9a194191ceedfd098135d\AndroidManifest.xml:27:17-104
-intent-filter#com.android.vending.INSTALL_REFERRER
-ADDED from [com.google.firebase:firebase-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.6.2.aar\3c5ad3f3a7b9a194191ceedfd098135d\AndroidManifest.xml:28:11-30:27
-action#com.android.vending.INSTALL_REFERRER
-ADDED from [com.google.firebase:firebase-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.6.2.aar\3c5ad3f3a7b9a194191ceedfd098135d\AndroidManifest.xml:29:15-76
-	android:name
-		ADDED from [com.google.firebase:firebase-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.6.2.aar\3c5ad3f3a7b9a194191ceedfd098135d\AndroidManifest.xml:29:23-74
-service#com.google.android.gms.measurement.AppMeasurementService
-ADDED from [com.google.firebase:firebase-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.6.2.aar\3c5ad3f3a7b9a194191ceedfd098135d\AndroidManifest.xml:32:7-137
-MERGED from [com.google.firebase:firebase-analytics-impl:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.6.2.aar\c4b9de3a62aee761d95b9ab5cabf4c3a\AndroidManifest.xml:27:7-137
-MERGED from [com.google.firebase:firebase-analytics-impl:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.6.2.aar\c4b9de3a62aee761d95b9ab5cabf4c3a\AndroidManifest.xml:27:7-137
-	android:enabled
-		ADDED from [com.google.firebase:firebase-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.6.2.aar\3c5ad3f3a7b9a194191ceedfd098135d\AndroidManifest.xml:32:88-110
-	android:exported
-		ADDED from [com.google.firebase:firebase-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.6.2.aar\3c5ad3f3a7b9a194191ceedfd098135d\AndroidManifest.xml:32:111-135
-	android:name
-		ADDED from [com.google.firebase:firebase-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.6.2.aar\3c5ad3f3a7b9a194191ceedfd098135d\AndroidManifest.xml:32:16-87
-service#com.google.android.gms.measurement.AppMeasurementJobService
-ADDED from [com.google.firebase:firebase-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.6.2.aar\3c5ad3f3a7b9a194191ceedfd098135d\AndroidManifest.xml:33:7-197
-	android:enabled
-		ADDED from [com.google.firebase:firebase-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.6.2.aar\3c5ad3f3a7b9a194191ceedfd098135d\AndroidManifest.xml:33:148-170
-	android:exported
-		ADDED from [com.google.firebase:firebase-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.6.2.aar\3c5ad3f3a7b9a194191ceedfd098135d\AndroidManifest.xml:33:171-195
-	android:permission
-		ADDED from [com.google.firebase:firebase-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.6.2.aar\3c5ad3f3a7b9a194191ceedfd098135d\AndroidManifest.xml:33:91-147
-	android:name
-		ADDED from [com.google.firebase:firebase-analytics:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.6.2.aar\3c5ad3f3a7b9a194191ceedfd098135d\AndroidManifest.xml:33:16-90
 permission#${applicationId}.permission.C2D_MESSAGE
 ADDED from [com.google.firebase:firebase-iid:11.6.2] C:\Users\sadowsm3\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.6.2.aar\60c4722d229053ff377e86136d5ea844\AndroidManifest.xml:25:5-109
 	android:protectionLevel

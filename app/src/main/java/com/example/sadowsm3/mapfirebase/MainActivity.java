@@ -5,20 +5,31 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.widget.ListView;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
+    private static final String TAG = MainActivity.class.getSimpleName();
+    private List<Location> locations;
+    private LocationAdapter listAdapter;
+    private DatabaseReference mFirebaseDatabase;
+    private FirebaseDatabase mFirebaseInstance;
+    private ListView listViewProducts;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
+        initializeGUI();
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -29,27 +40,105 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        mFirebaseInstance = FirebaseDatabase.getInstance();
+
+        // get reference to 'users' node
+        mFirebaseDatabase = mFirebaseInstance.getReference("locations");
+
+        // store app title to 'app_title' node
+        mFirebaseInstance.getReference("android-firebase-database").setValue("Realtime Database");
+
+        mFirebaseInstance.getReference("android-firebase-database").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                Log.e(TAG, "App title updated");
+                String appTitle = dataSnapshot.getValue(String.class);
+                // update toolbar title
+                //getSupportActionBar().setTitle(appTitle);
+                Log.e(TAG, appTitle);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+                // Failed to read value
+                Log.e(TAG, "Failed to read app title value.", error.toException());
+            }
+        });
+        // app_title change listener
+        mFirebaseInstance.getReference("locations").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                locations = new ArrayList<>();
+                for (DataSnapshot noteDataSnapshot : dataSnapshot.getChildren()) {
+                    Location location = noteDataSnapshot.getValue(Location.class);
+                    locations.add(location);
+                    Log.e(TAG, location.getTitle());
+                    fillListViewData(locations);
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+                // Failed to read value
+                Log.e(TAG, "Failed to read app title value.", error.toException());
+            }
+        });
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
+    protected void onResume() {
+        super.onResume();
+
+        mFirebaseInstance.getReference("locations").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                locations = new ArrayList<>();
+                for (DataSnapshot noteDataSnapshot : dataSnapshot.getChildren()) {
+                    Location location = noteDataSnapshot.getValue(Location.class);
+                    locations.add(location);
+                    fillListViewData(locations);
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+                // Failed to read value
+                Log.e(TAG, "Failed to read app title value.", error.toException());
+            }
+        });
+
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+    //TODO Edit
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
+    private void fillListViewData(List<Location> locations) {
+        listAdapter = new LocationAdapter(this, locations);
+        listViewProducts.setAdapter(listAdapter);
     }
+
+    private void initializeGUI() {
+        listViewProducts = (ListView) findViewById(R.id.lvLocations);
+        //initListViewOnItemClick();
+    }
+
+    public void refreshMainActivity(View view) {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+
+    //TODO edit endpoint
+//    private void initListViewOnItemClick() {
+//        listViewProducts.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> parent, View v, int position,
+//                                    long id) {
+//                Location location = locations.get(position);
+//                Intent intent = new Intent(MainActivity.this, FirebaseViewActivity.class);
+//                intent.putExtra("location", location);
+//                startActivity(intent);
+//            }
+//        });
+//    }
+
 }

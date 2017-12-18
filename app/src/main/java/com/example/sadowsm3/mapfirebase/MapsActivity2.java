@@ -67,7 +67,7 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
                 final Dialog dialog = new Dialog(MapsActivity2.this);
                 dialog.setContentView(R.layout.location_list);
                 dialog.setTitle("Title...");
-                ListAdapter adapter = new LocationAdapter(MapsActivity2.this, new ArrayList<com.example.sadowsm3.mapfirebase.Location>());
+                ListAdapter adapter = new LocationAdapter(MapsActivity2.this, );
                 ListView lv = (ListView) dialog.findViewById(R.id.lvLocations);
                 lv.setAdapter(adapter);
                 dialog.show();

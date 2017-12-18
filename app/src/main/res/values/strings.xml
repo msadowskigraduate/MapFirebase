@@ -5,4 +5,8 @@
     <string name="title_activity_maps2">Map</string>
     <string name="placesList">Favorite Locations</string>
     <string name="welcome_map_text">Current Location</string>
+    <string name="title_activity_main2">Main2Activity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 </resources>

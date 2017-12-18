@@ -49,6 +49,37 @@
           "status": 2
         }
       }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1072563355151:android:48ca40bd20e45e84",
+        "android_client_info": {
+          "package_name": "com.example.sadowsm3.mapfirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1072563355151-pgstgm6shi11hc6vmllktvkdhs2frd6r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbce8np53hnrpJDns9V_nO20cztFGZF8k"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
     }
   ],
   "configuration_version": "1"
