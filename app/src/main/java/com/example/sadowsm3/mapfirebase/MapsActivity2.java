@@ -50,7 +50,7 @@ import lombok.NonNull;
 
 import static com.google.android.gms.location.LocationServices.getFusedLocationProviderClient;
 
-public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallback, OnCompleteListener<Void> {
+public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallback {
 
     private static final String TAG = MapsActivity2.class.getSimpleName();
 
@@ -64,18 +64,6 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
     private boolean mLocationPermissionGranted;
     private List<com.example.sadowsm3.mapfirebase.Location> locationList;
     private LatLng currentLocation;
-
-    @Override
-    public void onComplete(@NonNull Task<Void> task) {
-        mPendingGeofenceTask = PendingGeofenceTask.NONE;
-        if (task.isSuccessful()) {
-           // populateGeofenceList(locationList);
-            Toast.makeText(this, "Complete", Toast.LENGTH_SHORT).show();
-        } else {
-            // Get the status code for the error and log it using a user-friendly message.
-            Log.w(TAG, "error");
-        }
-    }
 
     /**
      * Tracks whether the user requested to add or remove geofences, or to do neither.
@@ -104,7 +92,6 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps2);
-        startLocationUpdates();
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
@@ -142,7 +129,6 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
         mGeofenceList = new ArrayList<>();
         mGeofencePendingIntent = null;
         mGeofencingClient = LocationServices.getGeofencingClient(this);
-        populateGeofenceList(locationList);
     }
 
     // Trigger new location updates at interval
@@ -164,6 +150,7 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
         getFusedLocationProviderClient(this).requestLocationUpdates(mLocationRequest, new LocationCallback() {
                     @Override
                     public void onLocationResult(LocationResult locationResult) {
+                        centerCameraOnLocation(new LatLng(locationResult.getLastLocation().getLatitude(), locationResult.getLastLocation().getLongitude()));
                         onLocationChanged(locationResult.getLastLocation());
                     }
                 },
@@ -191,6 +178,7 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
                     public void onSuccess(Location location) {
                         // GPS location can be null if GPS is switched off
                         if (location != null) {
+                            centerCameraOnLocation(new LatLng(location.getLatitude(), location.getLongitude()));
                             onLocationChanged(location);
                         }
                     }
@@ -217,9 +205,19 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
         } else {
             Toast.makeText(getApplicationContext(),"No locations saved!", Toast.LENGTH_LONG).show();
         }
+        startLocationUpdates();
+        populateGeofenceList(locationList);
     }
 
     private void updatePositionOnMap(LatLng position) {
+        if (googleMap != null) {
+            googleMap.addMarker(new MarkerOptions().position(position).title("Current Position"));
+        } else {
+            Log.e(this.getLocalClassName(), "googleMap is null!");
+        }
+    }
+
+    private void centerCameraOnLocation(LatLng position) {
         if (googleMap != null) {
             googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(new CameraPosition.Builder()
                     .target(position)
@@ -230,6 +228,7 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
             Log.e(this.getLocalClassName(), "googleMap is null!");
         }
     }
+
 
     private void getLocationPermission() {
     /*
@@ -320,8 +319,8 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
                     // Create the geofence.
                     .build());
             Log.e(TAG, "Geofance constructed!");
-            mGeofencingClient.addGeofences(getGeofencingRequest(), getGeofencePendingIntent())
-                    .addOnCompleteListener(this);
+
+            mGeofencingClient.addGeofences(getGeofencingRequest(), getGeofencePendingIntent());
         }
     }
     private PendingIntent getGeofencePendingIntent() {
@@ -338,9 +337,9 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
         CircleOptions circleOptions = new CircleOptions()
                 .center(position)
                 .radius(radius)
-                .strokeWidth(10)
-                .strokeColor(Color.BLUE)
-                .fillColor(Color.BLUE);
+                .strokeWidth(2)
+                .fillColor(Color.BLUE)
+                .strokeColor(Color.TRANSPARENT);
 
         googleMap.addCircle(circleOptions);
     }
