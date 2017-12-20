@@ -540,17 +540,17 @@ public final class R {
         public static final int gcm_fallback_notification_channel_label = 0x7f0f0061;
         public static final int place_autocomplete_clear_button = 0x7f0f008a;
         public static final int place_autocomplete_search_hint = 0x7f0f008b;
-        public static final int s1 = 0x7f0f008e;
-        public static final int s2 = 0x7f0f008f;
-        public static final int s3 = 0x7f0f0090;
-        public static final int s4 = 0x7f0f0091;
-        public static final int s5 = 0x7f0f0092;
-        public static final int s6 = 0x7f0f0093;
-        public static final int s7 = 0x7f0f0094;
-        public static final int tagmanager_preview_dialog_button = 0x7f0f0098;
-        public static final int tagmanager_preview_dialog_message = 0x7f0f0099;
-        public static final int tagmanager_preview_dialog_title = 0x7f0f009a;
-        public static final int wallet_buy_button_place_holder = 0x7f0f009f;
+        public static final int s1 = 0x7f0f008f;
+        public static final int s2 = 0x7f0f0090;
+        public static final int s3 = 0x7f0f0091;
+        public static final int s4 = 0x7f0f0092;
+        public static final int s5 = 0x7f0f0093;
+        public static final int s6 = 0x7f0f0094;
+        public static final int s7 = 0x7f0f0095;
+        public static final int tagmanager_preview_dialog_button = 0x7f0f0099;
+        public static final int tagmanager_preview_dialog_message = 0x7f0f009a;
+        public static final int tagmanager_preview_dialog_title = 0x7f0f009b;
+        public static final int wallet_buy_button_place_holder = 0x7f0f00a0;
     }
     public static final class style {
         public static final int CastExpandedController = 0x7f1000ad;
