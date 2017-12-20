@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">MapFirebase</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_maps2">Map</string>
+    <string name="placesList">Favorite Locations</string>
+    <string name="returnToMain">Return to Main Menu</string>
+    <string name="welcome_map_text">Current Location</string>
+    <string name="title_activity_main2">Main2Activity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+
+    <string name="location_parcelable_tag">location</string>
+    <string name="location_array_bundle">locations</string>
+
+    <!-- Transition type strings -->
+    <string name="geofence_transition_entered">Entered</string>
+    <string name="geofence_transition_exited">Exited</string>
+    <string name="unknown_geofence_transition">Unknown Transition</string>
+
+    <string name="geofence_transition_notification_text">
+        Click notification to return to app
+    </string>
+
+    <string name="insufficient_permissions">Insufficient permissions.</string>
+    <string name="permission_rationale">Location permission is needed for core functionality</string>
+    <string name="permission_denied_explanation">Permission was denied, but is needed for core
+        functionality.</string>
+    <string name="settings">Settings</string>
+</resources>
