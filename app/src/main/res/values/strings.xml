@@ -4,6 +4,7 @@
     <string name="title_activity_maps">Map</string>
     <string name="title_activity_maps2">Map</string>
     <string name="placesList">Favorite Locations</string>
+    <string name="returnToMain">Return to Main Menu</string>
     <string name="welcome_map_text">Current Location</string>
     <string name="title_activity_main2">Main2Activity</string>
 

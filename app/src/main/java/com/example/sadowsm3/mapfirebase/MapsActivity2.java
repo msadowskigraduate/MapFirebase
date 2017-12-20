@@ -96,7 +96,7 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
             Log.e(TAG, "Errors with parcelable ");
             e.printStackTrace();
         }
-        Button clickButton = (Button) findViewById(R.id.placesList);
+        FloatingActionButton clickButton = (FloatingActionButton) findViewById(R.id.placesList);
         clickButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -360,8 +360,8 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
                 .center(position)
                 .radius(radius)
                 .strokeWidth(2)
-                .fillColor(Color.BLUE)
-                .strokeColor(Color.TRANSPARENT);
+                .fillColor(Color.TRANSPARENT)
+                .strokeColor(Color.BLUE);
 
         googleMap.addCircle(circleOptions);
     }

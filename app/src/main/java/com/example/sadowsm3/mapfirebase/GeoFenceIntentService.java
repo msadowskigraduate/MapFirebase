@@ -24,7 +24,7 @@ public class GeoFenceIntentService extends IntentService {
     private static final String TAG = "GeofenceTransitionsIS";
 
     private static final String CHANNEL_ID = "channel_01";
-
+    private int notificationId = 0;
     /**
      * This constructor is required, and calls the super IntentService(String)
      * constructor with the name for a worker thread.
@@ -80,39 +80,22 @@ public class GeoFenceIntentService extends IntentService {
     }
 
     private void sendNotification(String notificationDetails) {
-        // Get an instance of the Notification manager
         NotificationManager mNotificationManager =
                 (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
 
-        // Android O requires a Notification Channel.
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             CharSequence name = getString(R.string.app_name);
-            // Create the channel for the notification
-            NotificationChannel mChannel =
-                    new NotificationChannel(CHANNEL_ID, name, NotificationManager.IMPORTANCE_DEFAULT);
-
-            // Set the Notification Channel for the Notification Manager.
+            NotificationChannel mChannel = new NotificationChannel(CHANNEL_ID, name, NotificationManager.IMPORTANCE_DEFAULT);
             mNotificationManager.createNotificationChannel(mChannel);
         }
-
-        // Create an explicit content Intent that starts the main Activity.
         Intent notificationIntent = new Intent(getApplicationContext(), MainActivity.class);
-
-        // Construct a task stack.
         TaskStackBuilder stackBuilder = TaskStackBuilder.create(this);
-
-        // Add the main Activity to the task stack as the parent.
         stackBuilder.addParentStack(MainActivity.class);
-
-        // Push the content Intent onto the stack.
         stackBuilder.addNextIntent(notificationIntent);
-
-        // Get a PendingIntent containing the entire back stack.
         PendingIntent notificationPendingIntent =
                 stackBuilder.getPendingIntent(0, PendingIntent.FLAG_UPDATE_CURRENT);
 
-        // Issue the notification
-        mNotificationManager.notify(0, new NotificationCompat.Builder(this).setContentTitle(notificationDetails)
+        mNotificationManager.notify(incrementNotificationId(), new NotificationCompat.Builder(this).setContentTitle(notificationDetails)
                 .setSmallIcon(R.drawable.cast_ic_notification_0)
                 .setContentText(getString(R.string.geofence_transition_notification_text))
                 .setContentIntent(notificationPendingIntent)
@@ -130,5 +113,9 @@ public class GeoFenceIntentService extends IntentService {
             default:
                 return getString(R.string.unknown_geofence_transition);
         }
+    }
+
+    private int incrementNotificationId(){
+        return notificationId++;
     }
 }

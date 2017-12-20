@@ -7,6 +7,7 @@
     <!--android:layout_height="match_parent"-->
     <!--tools:context="com.example.sadowsm3.mapfirebase.MapsActivity2" />-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -38,7 +39,7 @@
             class="com.google.android.gms.maps.SupportMapFragment" />
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|left"
             android:orientation="vertical"
@@ -48,12 +49,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <Button
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/placesList"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
-                    android:id="@+id/placesList"
-                    android:text="@string/placesList" />
+                    android:clickable="true"
+                    app:backgroundTint="@color/cast_intro_overlay_button_background_color"
+                    app:srcCompat="@android:drawable/btn_star_big_on" />
+
             </LinearLayout>
         </LinearLayout>
     </FrameLayout>
