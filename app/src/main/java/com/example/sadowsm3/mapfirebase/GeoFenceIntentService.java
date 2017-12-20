@@ -20,13 +20,6 @@ import com.google.android.gms.location.GeofencingEvent;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * An {@link IntentService} subclass for handling asynchronous task requests in
- * a service on a separate handler thread.
- * <p>
- * TODO: Customize class - update intent actions, extra parameters and static
- * helper methods.
- */
 public class GeoFenceIntentService extends IntentService {
     private static final String TAG = "GeofenceTransitionsIS";
 
@@ -41,12 +34,6 @@ public class GeoFenceIntentService extends IntentService {
         super(TAG);
     }
 
-    /**
-     * Handles incoming intents.
-     *
-     * @param intent sent by Location Services. This Intent is provided to Location
-     *               Services (inside a PendingIntent) when addGeofences() is called.
-     */
     @Override
     protected void onHandleIntent(Intent intent) {
         GeofencingEvent geofencingEvent = GeofencingEvent.fromIntent(intent);
@@ -69,37 +56,29 @@ public class GeoFenceIntentService extends IntentService {
             Log.i(TAG, geofenceTransitionDetails);
         } else {
             // Log the error.
-            Log.e(TAG, getString(R.string.geofence_transition_invalid_type, geofenceTransition));
+            Log.e(TAG, "Intent failure"  + geofenceTransition);
         }
     }
 
-    /**
-     * Gets transition details and returns them as a formatted string.
-     *
-     * @param geofenceTransition  The ID of the geofence transition.
-     * @param triggeringGeofences The geofence(s) triggered.
-     * @return The transition details formatted as String.
-     */
-    private String getGeofenceTransitionDetails(
-            int geofenceTransition,
-            List<Geofence> triggeringGeofences) {
+    private String getGeofenceTransitionDetails(int geofenceTransition, List<Geofence> triggeringGeofences) {
 
         String geofenceTransitionString = getTransitionString(geofenceTransition);
 
-        // Get the Ids of each geofence that was triggered.
+        // Get the Ids and titles of each geofence that was triggered.
         ArrayList<String> triggeringGeofencesIdsList = new ArrayList<>();
+        ArrayList<String> triggeringGeofencesTitlesList = new ArrayList<>();
+
         for (Geofence geofence : triggeringGeofences) {
-            triggeringGeofencesIdsList.add(geofence.getRequestId());
+            String[] idsTitle = geofence.getRequestId().split("###");
+            triggeringGeofencesIdsList.add(idsTitle[0]);
+            //error
+            triggeringGeofencesTitlesList.add(idsTitle[1]);
         }
-        String triggeringGeofencesIdsString = TextUtils.join(", ", triggeringGeofencesIdsList);
+        String triggeringGeofencesIdsString = TextUtils.join(", ", triggeringGeofencesTitlesList);
 
         return geofenceTransitionString + ": " + triggeringGeofencesIdsString;
     }
 
-    /**
-     * Posts a notification in the notification bar when a transition is detected.
-     * If the user clicks the notification, control goes to the MainActivity.
-     */
     private void sendNotification(String notificationDetails) {
         // Get an instance of the Notification manager
         NotificationManager mNotificationManager =
@@ -142,12 +121,6 @@ public class GeoFenceIntentService extends IntentService {
                 .build());
     }
 
-    /**
-     * Maps geofence transition types to their human-readable equivalents.
-     *
-     * @param transitionType A transition type constant defined in Geofence
-     * @return A String indicating the type of transition
-     */
     private String getTransitionString(int transitionType) {
         switch (transitionType) {
             case Geofence.GEOFENCE_TRANSITION_ENTER:

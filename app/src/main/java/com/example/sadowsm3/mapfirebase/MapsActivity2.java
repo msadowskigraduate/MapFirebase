@@ -15,6 +15,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
@@ -38,10 +39,8 @@ import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.CircleOptions;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -49,6 +48,7 @@ import java.util.List;
 import lombok.NonNull;
 
 import static com.google.android.gms.location.LocationServices.getFusedLocationProviderClient;
+import static java.util.stream.Collectors.toList;
 
 public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallback {
 
@@ -66,13 +66,6 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
     private LatLng currentLocation;
 
     /**
-     * Tracks whether the user requested to add or remove geofences, or to do neither.
-     */
-    private enum PendingGeofenceTask {
-        ADD, REMOVE, NONE
-    }
-
-    /**
      * Provides access to the Geofencing API.
      */
     private GeofencingClient mGeofencingClient;
@@ -87,8 +80,6 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
      */
     private PendingIntent mGeofencePendingIntent;
 
-    private PendingGeofenceTask mPendingGeofenceTask = PendingGeofenceTask.NONE;
-
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps2);
@@ -97,7 +88,10 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
         mapFragment.getMapAsync(this);
         try {
             Bundle bundle = getIntent().getExtras();
-            locationList = bundle.getParcelableArrayList("locations");
+            locationList = bundle.getParcelableArrayList(getString(R.string.location_array_bundle));
+            if(locationList == null) {
+                locationList = new ArrayList<>();
+            }
         } catch (Exception e) {
             Log.e(TAG, "Errors with parcelable ");
             e.printStackTrace();
@@ -108,7 +102,7 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
             public void onClick(View v) {
                 final Dialog dialog = new Dialog(MapsActivity2.this);
                 dialog.setContentView(R.layout.location_list);
-                dialog.setTitle("Title...");
+                dialog.setTitle("Location List");
                 ListAdapter adapter = new LocationAdapter(MapsActivity2.this, locationList);
                 ListView lv = (ListView) dialog.findViewById(R.id.lvLocations);
                 lv.setAdapter(adapter);
@@ -118,9 +112,32 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
                     @Override
                     public void onClick(View view) {
                         Intent intent = new Intent(getBaseContext(), LocationEdit.class);
-                        intent.putExtra("longitude", getCurrentLocation().longitude);
-                        intent.putExtra("latitude", getCurrentLocation().latitude);
+                        try {
+
+                            intent.putExtra("longitude", getCurrentLocation().longitude);
+                            intent.putExtra("latitude", getCurrentLocation().latitude);
+                            startActivity(intent);
+                        }
+                        catch(Exception e) {
+                            Log.e(TAG, e.getMessage());
+                        }
+                    }
+                });
+                lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                        com.example.sadowsm3.mapfirebase.Location location = locationList.get(position);
+                        centerCameraOnLocation(new LatLng(location.getLatitude(), location.getLongitude()));
+                        dialog.hide();
+                    }
+                });
+                lv.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+                    @Override
+                    public boolean onItemLongClick(AdapterView<?> adapterView, View view, int position, long l) {
+                        Intent intent = new Intent(getBaseContext(), LocationEdit.class);
+                        intent.putExtra(getString(R.string.location_parcelable_tag), locationList.get(position));
                         startActivity(intent);
+                        return false;
                     }
                 });
             }
@@ -200,13 +217,15 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
             googleMap.setMyLocationEnabled(true);
         }
 
-        if(!locationList.isEmpty()) {
-            populateMarkers(locationList);
+        if (locationList != null) {
+            if(!locationList.isEmpty())
+                populateMarkers(locationList);
         } else {
-            Toast.makeText(getApplicationContext(),"No locations saved!", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "No locations saved!", Toast.LENGTH_LONG).show();
         }
         startLocationUpdates();
-        populateGeofenceList(locationList);
+        if(locationList != null)
+         populateGeofenceList(locationList);
     }
 
     private void updatePositionOnMap(LatLng position) {
@@ -264,15 +283,16 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
     }
 
     private void populateMarkers(List<com.example.sadowsm3.mapfirebase.Location> locations) {
-        for(com.example.sadowsm3.mapfirebase.Location l : locations) {
+        for (com.example.sadowsm3.mapfirebase.Location l : locations) {
             googleMap.addMarker(new MarkerOptions().position(new LatLng(l.getLatitude(), l.getLongitude())).title(l.getTitle()));
-            drawGeofenceCircle(new LatLng(l.getLatitude(), l.getLongitude()), l.radius);
+            drawGeofenceCircle(new LatLng(l.getLatitude(), l.getLongitude()), l.getRadius());
         }
     }
 
     private LatLng getCurrentLocation() {
         return currentLocation;
     }
+
     private GeofencingRequest getGeofencingRequest() {
         GeofencingRequest.Builder builder = new GeofencingRequest.Builder();
 
@@ -289,8 +309,10 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
     }
 
     @SuppressLint("MissingPermission")
-    private void populateGeofenceList(List<com.example.sadowsm3.mapfirebase.Location > locationList) {
-        mGeofenceList.clear();
+    private void populateGeofenceList(List<com.example.sadowsm3.mapfirebase.Location> locationList) {
+        if(mGeofenceList.size() > 0) {
+            removeGeofences();
+        }
         Log.e(TAG, "GeofenceList cleared!");
 
         for (com.example.sadowsm3.mapfirebase.Location l : locationList) {
@@ -298,7 +320,7 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
             mGeofenceList.add(new Geofence.Builder()
                     // Set the request ID of the geofence. This is a string to identify this
                     // geofence.
-                    .setRequestId(l.getId())
+                    .setRequestId(l.getId() + "###" + l.getTitle())
 
                     // Set the circular region of this geofence.
                     .setCircularRegion(
@@ -323,16 +345,16 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
             mGeofencingClient.addGeofences(getGeofencingRequest(), getGeofencePendingIntent());
         }
     }
+
     private PendingIntent getGeofencePendingIntent() {
         // Reuse the PendingIntent if we already have it.
         if (mGeofencePendingIntent != null) {
             return mGeofencePendingIntent;
         }
         Intent intent = new Intent(this, GeoFenceIntentService.class);
-        // We use FLAG_UPDATE_CURRENT so that we get the same pending intent back when calling
-        // addGeofences() and removeGeofences().
         return PendingIntent.getService(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
     }
+
     private void drawGeofenceCircle(LatLng position, float radius) {
         CircleOptions circleOptions = new CircleOptions()
                 .center(position)
@@ -342,5 +364,20 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
                 .strokeColor(Color.TRANSPARENT);
 
         googleMap.addCircle(circleOptions);
+    }
+
+    private void removeGeofences() {
+        List<String> geoIds = mGeofenceList.stream()
+                .map(Geofence::getRequestId)
+                .collect(toList());
+        Log.e(TAG, geoIds.size() + " Removing geofences...");
+        mGeofencingClient.removeGeofences(geoIds);
+        Log.e(TAG, "Removed.");
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        removeGeofences();
     }
 }

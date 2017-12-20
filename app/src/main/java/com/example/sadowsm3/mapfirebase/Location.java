@@ -19,12 +19,12 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Location implements Parcelable{
-    String id;
-    String title;
-    String description;
-    float longitude;
-    float latitude;
-    float radius;
+    private String id;
+    private String title;
+    private String description;
+    private float longitude;
+    private float latitude;
+    private float radius;
 
     @Override
     public int describeContents() {

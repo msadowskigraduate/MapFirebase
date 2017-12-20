@@ -1,6 +1,7 @@
 package com.example.sadowsm3.mapfirebase;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -39,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(getBaseContext(), MapsActivity2.class);
                 Bundle bundle = new Bundle();
-                bundle.putParcelableArrayList("locations", (ArrayList<Location>) locations);
+                bundle.putParcelableArrayList(getString(R.string.location_array_bundle), (ArrayList<Location>) locations);
                 i.putExtras(bundle);
                 startActivity(i);
             }
@@ -48,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         mFirebaseInstance = FirebaseDatabase.getInstance();
 
         // get reference to 'users' node
-        mFirebaseDatabase = mFirebaseInstance.getReference("locations");
+        mFirebaseDatabase = mFirebaseInstance.getReference(getString(R.string.location_array_bundle));
 
         // store app title to 'app_title' node
         mFirebaseInstance.getReference("android-firebase-database").setValue("Realtime Database");
@@ -58,8 +59,7 @@ public class MainActivity extends AppCompatActivity {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 Log.e(TAG, "App title updated");
                 String appTitle = dataSnapshot.getValue(String.class);
-                // update toolbar title
-                //getSupportActionBar().setTitle(appTitle);
+                //TODO Set title of activity
                 Log.e(TAG, appTitle);
             }
 
@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
 
-        mFirebaseInstance.getReference("locations").addValueEventListener(new ValueEventListener() {
+        mFirebaseInstance.getReference(getString(R.string.location_array_bundle)).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 locations = new ArrayList<>();
@@ -134,7 +134,7 @@ public class MainActivity extends AppCompatActivity {
                                     long id) {
                 Location location = locations.get(position);
                 Intent intent = new Intent(MainActivity.this, LocationEdit.class);
-                intent.putExtra("location", location);
+                intent.putExtra(getString(R.string.location_parcelable_tag), location);
                 startActivity(intent);
             }
         });

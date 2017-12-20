@@ -48,9 +48,9 @@ public class LocationEdit extends AppCompatActivity {
         initGUI();
 
         Intent i = getIntent();
-        if (i.getExtras() != null && i.getExtras().getParcelable("location") != null) {
+        if (i.getExtras() != null && i.getExtras().getParcelable(getString(R.string.location_parcelable_tag)) != null) {
             setButtonListener(false);
-            Location location = i.getExtras().getParcelable("location");
+            Location location = i.getExtras().getParcelable(getString(R.string.location_parcelable_tag));
             try {
                 locationId = location.getId();
                 setValues(location.getTitle(), String.valueOf(location.getDescription()), String.valueOf(location.getLatitude()),
@@ -73,7 +73,7 @@ public class LocationEdit extends AppCompatActivity {
 
         mFirebaseInstance = FirebaseDatabase.getInstance();
 
-        mFirebaseDatabase = mFirebaseInstance.getReference("locations");
+        mFirebaseDatabase = mFirebaseInstance.getReference(getString(R.string.location_array_bundle));
 
         mFirebaseInstance.getReference("android-firebase-database").setValue("Realtime Database");
 
