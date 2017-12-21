@@ -72,8 +72,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_weight="1"
+        android:button="@android:drawable/ic_delete"
         android:focusable="false"
-        android:text="Delete"
         android:textColor="@color/colorPrimaryDark" />
 </GridLayout>
 

@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Wed Dec 20 10:10:03 CET 2017
+#Wed Dec 20 15:59:11 CET 2017
 2.base=C\:\\Users\\sadowsm3\\Documents\\pjatk- repository\\MapFirebase\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\13
 5.set=DEX
 0.path=classes.dex

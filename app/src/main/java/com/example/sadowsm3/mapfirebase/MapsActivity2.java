@@ -13,6 +13,8 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -50,7 +52,7 @@ import lombok.NonNull;
 import static com.google.android.gms.location.LocationServices.getFusedLocationProviderClient;
 import static java.util.stream.Collectors.toList;
 
-public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallback {
+public class MapsActivity2 extends AppCompatActivity implements OnMapReadyCallback {
 
     private static final String TAG = MapsActivity2.class.getSimpleName();
 
@@ -83,6 +85,8 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps2);
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(myToolbar);
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
@@ -143,6 +147,14 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
             }
         });
 
+        FloatingActionButton returnToMain = (FloatingActionButton) findViewById(R.id.returnToMain);
+        returnToMain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getBaseContext(), MainActivity.class);
+                startActivity(intent);
+            }
+        });
         mGeofenceList = new ArrayList<>();
         mGeofencePendingIntent = null;
         mGeofencingClient = LocationServices.getGeofencingClient(this);
@@ -360,7 +372,7 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
                 .center(position)
                 .radius(radius)
                 .strokeWidth(2)
-                .fillColor(Color.TRANSPARENT)
+                .fillColor(0x5500ff00)
                 .strokeColor(Color.BLUE);
 
         googleMap.addCircle(circleOptions);

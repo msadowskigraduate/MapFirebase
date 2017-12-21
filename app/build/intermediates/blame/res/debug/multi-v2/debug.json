@@ -1,21 +1,6 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\sadowsm3\\Documents\\pjatk- repository\\MapFirebase\\app\\build\\intermediates\\res\\merged\\debug\\values-night-v8_values-night-v8.arsc.flat",
-            "map": [
-                {
-                    "source": "C:\\Users\\sadowsm3\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\b3f62a0cbe8a25250c5a11b5f15f929a\\res\\values-night-v8\\values-night-v8.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "55,125,209,293,389,491,593",
-                        "endColumns": "69,83,83,95,101,101,93",
-                        "endOffsets": "120,204,288,384,486,588,682"
-                    }
-                }
-            ]
-        },
-        {
             "outputFile": "C:\\Users\\sadowsm3\\Documents\\pjatk- repository\\MapFirebase\\app\\build\\intermediates\\res\\merged\\debug\\values-lt_values-lt.arsc.flat",
             "map": [
                 {
@@ -208,16 +193,16 @@
             ]
         },
         {
-            "outputFile": "C:\\Users\\sadowsm3\\Documents\\pjatk- repository\\MapFirebase\\app\\build\\intermediates\\res\\merged\\debug\\values-si-rLK_values-si-rLK.arsc.flat",
+            "outputFile": "C:\\Users\\sadowsm3\\Documents\\pjatk- repository\\MapFirebase\\app\\build\\intermediates\\res\\merged\\debug\\values-night-v8_values-night-v8.arsc.flat",
             "map": [
                 {
-                    "source": "C:\\Users\\sadowsm3\\.gradle\\caches\\transforms-1\\files-1.1\\mediarouter-v7-25.2.0.aar\\ab9c5851d1b37e54301208a1b8d7ccee\\res\\values-si-rLK\\values-si-rLK.xml",
+                    "source": "C:\\Users\\sadowsm3\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\b3f62a0cbe8a25250c5a11b5f15f929a\\res\\values-night-v8\\values-night-v8.xml",
                     "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,156,268,380,495,586,667,760,858,954,1049,1146,1242,1358,1465,1557,1645,1743,1847,1934",
-                        "endColumns": "100,111,111,114,90,80,92,97,95,94,96,95,115,106,91,87,97,103,86,91",
-                        "endOffsets": "151,263,375,490,581,662,755,853,949,1044,1141,1237,1353,1460,1552,1640,1738,1842,1929,2021"
+                        "startLines": "2,3,4,5,6,7,8",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "55,125,209,293,389,491,593",
+                        "endColumns": "69,83,83,95,101,101,93",
+                        "endOffsets": "120,204,288,384,486,588,682"
                     }
                 }
             ]
@@ -410,6 +395,21 @@
                         "startOffsets": "8121",
                         "endColumns": "103",
                         "endOffsets": "8220"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "C:\\Users\\sadowsm3\\Documents\\pjatk- repository\\MapFirebase\\app\\build\\intermediates\\res\\merged\\debug\\values-si-rLK_values-si-rLK.arsc.flat",
+            "map": [
+                {
+                    "source": "C:\\Users\\sadowsm3\\.gradle\\caches\\transforms-1\\files-1.1\\mediarouter-v7-25.2.0.aar\\ab9c5851d1b37e54301208a1b8d7ccee\\res\\values-si-rLK\\values-si-rLK.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,156,268,380,495,586,667,760,858,954,1049,1146,1242,1358,1465,1557,1645,1743,1847,1934",
+                        "endColumns": "100,111,111,114,90,80,92,97,95,94,96,95,115,106,91,87,97,103,86,91",
+                        "endOffsets": "151,263,375,490,581,662,755,853,949,1044,1141,1237,1353,1460,1552,1640,1738,1842,1929,2021"
                     }
                 }
             ]
@@ -1932,21 +1932,6 @@
             ]
         },
         {
-            "outputFile": "C:\\Users\\sadowsm3\\Documents\\pjatk- repository\\MapFirebase\\app\\build\\intermediates\\res\\merged\\debug\\values-large-v4_values-large-v4.arsc.flat",
-            "map": [
-                {
-                    "source": "C:\\Users\\sadowsm3\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\b3f62a0cbe8a25250c5a11b5f15f929a\\res\\values-large-v4\\values-large-v4.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10",
-                        "startColumns": "4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,114,185,256,326,396,464,532,636",
-                        "endColumns": "58,70,70,69,69,67,67,103,115",
-                        "endOffsets": "109,180,251,321,391,459,527,631,747"
-                    }
-                }
-            ]
-        },
-        {
             "outputFile": "C:\\Users\\sadowsm3\\Documents\\pjatk- repository\\MapFirebase\\app\\build\\intermediates\\res\\merged\\debug\\values-bs-rBA_values-bs-rBA.arsc.flat",
             "map": [
                 {
@@ -1957,6 +1942,21 @@
                         "startOffsets": "55,165,279,398,524,620,708,802,908,1006,1099,1195,1288,1405,1522,1609,1698,1797,1906,1992",
                         "endColumns": "109,113,118,125,95,87,93,105,97,92,95,92,116,116,86,88,98,108,85,93",
                         "endOffsets": "160,274,393,519,615,703,797,903,1001,1094,1190,1283,1400,1517,1604,1693,1792,1901,1987,2081"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "C:\\Users\\sadowsm3\\Documents\\pjatk- repository\\MapFirebase\\app\\build\\intermediates\\res\\merged\\debug\\values-large-v4_values-large-v4.arsc.flat",
+            "map": [
+                {
+                    "source": "C:\\Users\\sadowsm3\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\b3f62a0cbe8a25250c5a11b5f15f929a\\res\\values-large-v4\\values-large-v4.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,114,185,256,326,396,464,532,636",
+                        "endColumns": "58,70,70,69,69,67,67,103,115",
+                        "endOffsets": "109,180,251,321,391,459,527,631,747"
                     }
                 }
             ]
@@ -3622,36 +3622,6 @@
             ]
         },
         {
-            "outputFile": "C:\\Users\\sadowsm3\\Documents\\pjatk- repository\\MapFirebase\\app\\build\\intermediates\\res\\merged\\debug\\values-my-rMM_values-my-rMM.arsc.flat",
-            "map": [
-                {
-                    "source": "C:\\Users\\sadowsm3\\.gradle\\caches\\transforms-1\\files-1.1\\mediarouter-v7-25.2.0.aar\\ab9c5851d1b37e54301208a1b8d7ccee\\res\\values-my-rMM\\values-my-rMM.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,163,272,381,492,598,691,785,896,994,1098,1200,1297,1410,1529,1616,1701,1805,1923,2007",
-                        "endColumns": "107,108,108,110,105,92,93,110,97,103,101,96,112,118,86,84,103,117,83,100",
-                        "endOffsets": "158,267,376,487,593,686,780,891,989,1093,1195,1292,1405,1524,1611,1696,1800,1918,2002,2103"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "C:\\Users\\sadowsm3\\Documents\\pjatk- repository\\MapFirebase\\app\\build\\intermediates\\res\\merged\\debug\\values-ms-rMY_values-ms-rMY.arsc.flat",
-            "map": [
-                {
-                    "source": "C:\\Users\\sadowsm3\\.gradle\\caches\\transforms-1\\files-1.1\\mediarouter-v7-25.2.0.aar\\ab9c5851d1b37e54301208a1b8d7ccee\\res\\values-ms-rMY\\values-ms-rMY.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,157,268,378,499,594,678,771,875,971,1068,1170,1266,1380,1490,1573,1654,1751,1858,1944",
-                        "endColumns": "101,110,109,120,94,83,92,103,95,96,101,95,113,109,82,80,96,106,85,93",
-                        "endOffsets": "152,263,373,494,589,673,766,870,966,1063,1165,1261,1375,1485,1568,1649,1746,1853,1939,2033"
-                    }
-                }
-            ]
-        },
-        {
             "outputFile": "C:\\Users\\sadowsm3\\Documents\\pjatk- repository\\MapFirebase\\app\\build\\intermediates\\res\\merged\\debug\\values-mk_values-mk.arsc.flat",
             "map": [
                 {
@@ -3822,6 +3792,36 @@
                         "startOffsets": "9643",
                         "endColumns": "105",
                         "endOffsets": "9744"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "C:\\Users\\sadowsm3\\Documents\\pjatk- repository\\MapFirebase\\app\\build\\intermediates\\res\\merged\\debug\\values-ms-rMY_values-ms-rMY.arsc.flat",
+            "map": [
+                {
+                    "source": "C:\\Users\\sadowsm3\\.gradle\\caches\\transforms-1\\files-1.1\\mediarouter-v7-25.2.0.aar\\ab9c5851d1b37e54301208a1b8d7ccee\\res\\values-ms-rMY\\values-ms-rMY.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,157,268,378,499,594,678,771,875,971,1068,1170,1266,1380,1490,1573,1654,1751,1858,1944",
+                        "endColumns": "101,110,109,120,94,83,92,103,95,96,101,95,113,109,82,80,96,106,85,93",
+                        "endOffsets": "152,263,373,494,589,673,766,870,966,1063,1165,1261,1375,1485,1568,1649,1746,1853,1939,2033"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "C:\\Users\\sadowsm3\\Documents\\pjatk- repository\\MapFirebase\\app\\build\\intermediates\\res\\merged\\debug\\values-my-rMM_values-my-rMM.arsc.flat",
+            "map": [
+                {
+                    "source": "C:\\Users\\sadowsm3\\.gradle\\caches\\transforms-1\\files-1.1\\mediarouter-v7-25.2.0.aar\\ab9c5851d1b37e54301208a1b8d7ccee\\res\\values-my-rMM\\values-my-rMM.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,163,272,381,492,598,691,785,896,994,1098,1200,1297,1410,1529,1616,1701,1805,1923,2007",
+                        "endColumns": "107,108,108,110,105,92,93,110,97,103,101,96,112,118,86,84,103,117,83,100",
+                        "endOffsets": "158,267,376,487,593,686,780,891,989,1093,1195,1292,1405,1524,1611,1696,1800,1918,2002,2103"
                     }
                 }
             ]

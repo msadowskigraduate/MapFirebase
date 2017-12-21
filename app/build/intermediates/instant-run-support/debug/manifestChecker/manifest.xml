@@ -64,7 +64,8 @@
 
         <activity
             android:name="com.example.sadowsm3.mapfirebase.MapsActivity2"
-            android:label="@string/title_activity_maps2" />
+            android:label="@string/title_activity_maps2"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name="com.example.sadowsm3.mapfirebase.LocationEdit" />
 
         <service
